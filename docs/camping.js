@@ -92,6 +92,14 @@
   var TILE_CACHE = 'trpl-camping-tiles-v1';
   // Private land the owner has posted electronically with ND Game and Fish. Only the POSTED flag is
   // requested; the service also holds owner names and contact details, which this tool never reads.
+  // Tribal land answers stay off until the wording is approved (Library editorial review for MHA
+  // Nation content). Reviewers can preview with ?tribal=preview on any page that embeds the widget.
+  var TRIBAL = opts.tribal === 'on' || /[?&]tribal=preview\b/.test(location.search);
+  // BLM's national Surface Management Agency map, asked for a tapped spot only when none of the
+  // detailed layers match. It is coarse, so it adds a note; it never changes the answer.
+  var SMA = 'https://gis.blm.gov/arcgis/rest/services/lands/BLM_Natl_SMA_LimitedScale/MapServer';
+  var SMA_NAMES = { BLM: 'Bureau of Land Management', USFS: 'U.S. Forest Service', NPS: 'National Park Service', FWS: 'U.S. Fish and Wildlife Service',
+    USBR: 'Bureau of Reclamation', USACE: 'U.S. Army Corps of Engineers', DOD: 'Department of Defense', ST: 'State of North Dakota', LG: 'local government', BIA: 'Bureau of Indian Affairs' };
   var EPOST = 'https://ndgishub.nd.gov/arcgis/rest/services/Applications/GNF_EpostedLandsCached/MapServer';
 
   var LINKS = {
@@ -112,6 +120,8 @@
     blm: 'https://www.blm.gov/programs/recreation/camping',
     parks: 'https://www.reservendparks.com/',
     burn: 'https://burnrestrictions.nd.gov',
+    schnell: 'https://www.blm.gov/visit/schnell-ranch-recreation-area',
+    tatFishWildlife: 'https://mhanation.com/fish-wildlife-division',
     postingMap: 'https://geocortex.gf.nd.gov/Html5Viewer/',
     privateLands: 'https://gf.nd.gov/node/400'
   };
@@ -182,14 +192,21 @@
     blm: {
       label: 'Bureau of Land Management land', who: 'Bureau of Land Management', status: 'ok',
       fill: '#F9D635', legend: 'BLM land',
-      rules: function () {
+      rules: function (p) {
+        if (p && p.x === 'schnell') return [
+          'Schnell Recreation Area, about a mile east of Richardton. No fee.',
+          'Dispersed primitive tent camping is allowed anywhere on the property except along the 1.5-mile nature trail. Six campsites have a fire ring, grill and picnic table.',
+          'Schnell is non-motorized: park and walk in.',
+          'Potable water is available from mid-April to mid-October. Three vault toilets are near the campsites.',
+          'Use the fire rings provided, burn only dead and down wood, and check today\u2019s fire restrictions first.'
+        ];
         return [
           'Dispersed camping is generally allowed, up to 14 days within any 28-day period, unless an area is posted closed.',
           'Stay on existing roads and trails.',
           'Many BLM parcels here are small and surrounded by private land. Make sure you have legal access before you go.'
         ];
       },
-      links: [['BLM camping rules', LINKS.blm]],
+      links: [['BLM camping rules', LINKS.blm], ['Schnell Recreation Area', LINKS.schnell]],
       contact: ''
     },
     wma: {
@@ -232,6 +249,19 @@
       fill: '#F36079', legend: 'Wildlife refuge',
       rules: function () { return ['Overnight camping is generally not allowed on refuges and waterfowl production areas. Follow posted rules.']; },
       links: [], contact: ''
+    },
+    tribal: {   // DRAFT: pending editorial review (Annalisa Robinson-Melton and Bridget). Off unless TRIBAL.
+      label: 'Fort Berthold Reservation', who: 'MHA Nation (Mandan, Hidatsa and Arikara Nation)', status: 'check',
+      fill: '#5B4A8A', legend: 'Fort Berthold Reservation',
+      rules: function () {
+        return [
+          'This spot is within the Fort Berthold Reservation, home of the MHA Nation. Land here may be tribal, allotted to tribal members, or privately owned.',
+          'Do not camp here without permission from the MHA Nation or the landowner.',
+          'Hunting, fishing and boating on the reservation are licensed by the Three Affiliated Tribes Fish & Wildlife Division in New Town.'
+        ];
+      },
+      links: [['Three Affiliated Tribes Fish & Wildlife Division', LINKS.tatFishWildlife]],
+      contact: 'Three Affiliated Tribes Fish & Wildlife Division, New Town: (701) 627-4760.'
     },
     buffer: {
       label: 'Too close to a developed site', who: 'U.S. Forest Service, Dakota Prairie Grasslands', status: 'no',
@@ -296,7 +326,7 @@
   }
 
   // When layers overlap, the more restrictive or more specific one wins.
-  var PRECEDENCE = ['nps', 'trust', 'fws', 'park', 'wma', 'usace', 'usbr', 'blm', 'usfs'];
+  var PRECEDENCE = ['nps', 'trust', 'fws', 'park', 'wma', 'usace', 'usbr', 'blm', 'usfs', 'tribal'];
 
   // ND Game and Fish, gf.nd.gov/wma (checked October 2026)
   var WMA_NO_CAMPING = ['alkali creek', 'spring creek', 'antelope creek', 'big oxbow', 'lewis and clark', 'neu', 'och', 'overlook',
@@ -541,10 +571,12 @@
   function classify(lat, lng) {
     var b = (state.meta && state.meta.bbox) || [-104.05, 46.0, -102.75, 48.1];
     var county = (hits(state.counties, lat, lng)[0] || { properties: {} }).properties.n || null;
-    var res = { lat: lat, lng: lng, county: county, outside: lng < b[0] || lng > b[2] || lat < b[1] || lat > b[3] };
+    function inBox(x) { return lng >= x[0] && lng <= x[2] && lat >= x[1] && lat <= x[3]; }
+    var covered = inBox(b) || ((state.meta && state.meta.extra) || []).some(function (a) { return inBox(a.bbox); });
+    var res = { lat: lat, lng: lng, county: county, outside: !covered };
     var found = hits(state.lands, lat, lng);
     var inside = found.some(function (f) { return f.properties.c === 'boundary'; });
-    found = found.filter(function (f) { return f.properties.c !== 'boundary'; });
+    found = found.filter(function (f) { return f.properties.c !== 'boundary' && (TRIBAL || f.properties.c !== 'tribal'); });
     found.sort(function (a, c) { return PRECEDENCE.indexOf(a.properties.c) - PRECEDENCE.indexOf(c.properties.c); });
     var top = found[0];
     res.cls = top ? top.properties.c : 'private';
@@ -583,11 +615,18 @@
     for (var i = 0; i < rows.length; i++) if (rows[i].kind === kind && rows[i].name === name) return rows[i];
     return null;
   }
+  // A declaration names the fire danger level at which campfires stop ("Low" means always). The
+  // state feed also marks declared items with a flag, but that flag does not mean the threshold is met.
   function campfireBanned(r, today) {
     if (!r || !r.declared) return false;
-    if (r.campfires_flag) return true;
     var lvl = LEVELS.indexOf(r.campfires_at || '');
-    return lvl > 0 && today >= lvl;
+    if (lvl > 0) return today >= lvl;
+    return !!r.campfires_flag;
+  }
+  function redFlag(county) {
+    return (state.nws || []).some(function (a) {
+      return /Red Flag/i.test(a.event || '') && (!county || new RegExp('\\b' + county + '\\b', 'i').test(a.area || ''));
+    });
   }
   function fireAt(res) {
     if (!state.fire) return { text: 'Fire information is not available right now. Check ' + LINKS.burn.replace('https://', '') + ' before lighting anything.', banned: null };
@@ -598,6 +637,7 @@
     else if (res.cls === 'blm') { r = restriction('blm', res.county); who = 'on BLM land in ' + res.county + ' County'; }
     if (!r && res.county) { r = restriction('county', res.county); who = 'in ' + res.county + ' County'; }
     var danger = today ? 'Fire danger today' + (res.county ? ' in ' + res.county + ' County' : '') + ': ' + LEVELS[today] + '. ' : '';
+    if (redFlag(res.county)) return { text: danger + 'A Red Flag Warning is in effect. No fires of any kind.', banned: true };
     if (campfireBanned(r, today)) {
       var extra = (res.cls === 'usfs' || res.cls === 'buffer') ? ' Propane stoves that turn on and off may be allowed with a cleared area around them; check the Forest Service order.' : '';
       return { text: danger + 'Campfires are not allowed ' + who + ' today.' + extra, banned: true };
@@ -679,6 +719,8 @@
       answer.appendChild(el('span', { class: 'verdict', text: st.word, style: 'background:' + st.bg + ';color:' + st.ink }));
       var place = cls.label;
       if (res.cls === 'wma') place = wmaName(res.props.n);
+      else if (res.cls === 'blm' && res.props.x) place = res.props.n;
+      else if (res.cls === 'tribal') place = res.props.n || cls.label;
       else if (res.cls === 'park' || res.cls === 'usace' || res.cls === 'usbr' || res.cls === 'fws') place = RENAMED[res.props.n] || res.props.n || cls.label;
       answer.appendChild(el('p', { class: 'place', text: place }));
       var who = cls.who;
@@ -702,7 +744,7 @@
       cls.links.forEach(function (l) { links.appendChild(el('a', { href: l[1], target: '_blank', rel: 'noopener', text: l[0] })); });
       if (links.childNodes.length) answer.appendChild(links);
       if (cls.contact) answer.appendChild(el('p', { class: 'meta', text: cls.contact }));
-      if (res.cls === 'private') checkPosted(lat, lng);
+      if (res.cls === 'private') { checkPosted(lat, lng); checkSMA(lat, lng); }
     }
     var coords = lat.toFixed(5) + ', ' + lng.toFixed(5);
     answer.appendChild(el('p', { class: 'meta', text: (fromGps && accuracy ? 'Location ' + coords + ' (within ' + Math.round(accuracy * 3.281) + ' ft). ' : 'Location ' + coords + '. ') +
@@ -743,6 +785,26 @@
     });
   }
 
+  // A second opinion from BLM's national land map for spots no detailed layer covers.
+  var smaSeq = 0;
+  function checkSMA(lat, lng) {
+    var seq = ++smaSeq;
+    var url = SMA + '/identify?geometry=' + lng.toFixed(6) + ',' + lat.toFixed(6) + '&geometryType=esriGeometryPoint&sr=4326&layers=all:1' +
+      '&tolerance=1&mapExtent=' + (lng - 0.05) + ',' + (lat - 0.05) + ',' + (lng + 0.05) + ',' + (lat + 0.05) + '&imageDisplay=400,400,96&returnGeometry=false&f=json';
+    getJSON(url, 12000).then(function (j) {
+      if (seq !== smaSeq) return;
+      var codes = (j.results || []).map(function (r) { return r.attributes && r.attributes.ADMIN_AGENCY_CODE; })
+        .filter(function (c, i, a) { return c && SMA_NAMES[c] && a.indexOf(c) === i; });
+      if (!TRIBAL) codes = codes.filter(function (c) { return c !== 'BIA'; });
+      if (!codes.length) return;
+      var names = codes.map(function (c) { return SMA_NAMES[c]; }).join(' or ');
+      var note = el('p', { class: 'meta sma', text: 'BLM\u2019s national land map, which is less detailed, shows ' + names + ' land at or near this spot. ' +
+        'The parcel records this guide uses do not, so treat it as private until the agency confirms otherwise.' });
+      var anchor = answer.querySelector('.posted');
+      if (anchor && anchor.nextSibling) answer.insertBefore(note, anchor.nextSibling); else answer.appendChild(note);
+    }).catch(function () { /* optional */ });
+  }
+
   // --- the map ---
   var mapEl, mapReady = null, loadingNote;
   if (SHOW.map) {
@@ -771,6 +833,7 @@
     lg.appendChild(el('li', {}, [el('span', { class: 'sw posted' }), 'Private land posted electronically (zoom in)']));
     lg.appendChild(el('li', {}, [el('span', { class: 'sw road' }), 'Forest Service road']));
     lg.appendChild(el('li', {}, [el('span', { class: 'sw bnd' }), 'Grassland boundary']));
+    if (TRIBAL) lg.appendChild(el('li', {}, [el('span', { class: 'sw', style: 'background:rgba(91,74,138,.25);border:2px dotted #5B4A8A' }), 'Fort Berthold Reservation']));
     lg.appendChild(el('li', {}, [el('span', { class: 'sw none' }), 'No color: private or unknown']));
     msec.appendChild(lg);
     msec.appendChild(el('p', { class: 'mapnote', html: 'The roads shown are National Forest System roads. Whether a road is open to vehicles is set by the Forest Service; see its <a href="' + LINKS.dpgMaps + '" target="_blank" rel="noopener">maps and guides</a> or ask the ranger district.' }));
@@ -817,11 +880,16 @@
 
       state.layers.lands = L.geoJSON(state.lands, {
         renderer: renderer, interactive: false,
-        filter: function (f) { return f.properties.c !== 'boundary'; },
+        filter: function (f) { return f.properties.c !== 'boundary' && f.properties.c !== 'tribal'; },
         style: function (f) {
           var c = CLASSES[f.properties.c] || CLASSES.usbr;
           return { stroke: true, weight: 0.6, color: c.fill, opacity: 0.9, fillColor: c.fill, fillOpacity: f.properties.c === 'nps' ? 0.28 : 0.42 };
         }
+      }).addTo(map);
+      if (TRIBAL) L.geoJSON(state.lands, {
+        renderer: renderer, interactive: false,
+        filter: function (f) { return f.properties.c === 'tribal'; },
+        style: function () { return { weight: 2, color: '#5B4A8A', dashArray: '2 6', fillColor: '#5B4A8A', fillOpacity: 0.12 }; }
       }).addTo(map);
       state.layers.boundary = L.geoJSON(state.lands, {
         renderer: renderer, interactive: false,
@@ -1020,7 +1088,7 @@
 
     // Campfires
     var med = dangerFor('Billings'), grass = restriction('usfs', 'Medora District');
-    var grassBanned = campfireBanned(grass, med ? med.today : 0);
+    var grassBanned = campfireBanned(grass, med ? med.today : 0) || redFlag('Billings');
     var fc = el('div', { class: 'card' }, [
       el('h4', { text: 'Campfires on the grassland' }),
       el('p', { class: 'big' + (grassBanned ? ' bad' : ''), text: state.fire ? (grassBanned ? 'Not allowed' : 'Check first') : 'Unknown' }),
@@ -1029,7 +1097,7 @@
     var rows = el('ul', { class: 'rows' });
     COUNTIES.forEach(function (c) {
       var d = dangerFor(c), r = restriction('county', c);
-      if (d || r) rows.appendChild(statusRow(c + ' County', campfireBanned(r, d ? d.today : 0)));
+      if (d || r) rows.appendChild(statusRow(c + ' County', campfireBanned(r, d ? d.today : 0) || redFlag(c)));
     });
     fc.appendChild(el('small', { text: 'Private and county land, by county:' }));
     fc.appendChild(rows);

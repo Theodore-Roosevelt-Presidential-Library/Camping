@@ -33,6 +33,12 @@ OUT = os.path.join(ROOT, 'docs', 'data')
 # and the three units of Theodore Roosevelt National Park, North Dakota side only.
 BBOX = (-104.05, 46.0, -102.75, 48.1)  # west, south, east, north
 
+# Named areas outside the main box that the guide also covers.
+EXTRA_AREAS = [
+    {'key': 'schnell', 'name': 'Schnell Recreation Area', 'bbox': (-102.36, 46.84, -102.12, 46.95)},  # BLM, near Richardton
+]
+COUNTY_BBOX = (-104.05, 46.0, -102.2, 48.1)  # wide enough for the extra areas
+
 UA = 'TRPL-Camping-Collector/1.0 (+https://camping.labs.trlibrary.com)'
 USFS = 'https://apps.fs.usda.gov/arcx/rest/services/EDW'
 PADUS = 'https://edits.nationalmap.gov/arcgis/rest/services/PAD-US/PAD_US_4_1/MapServer/0'
@@ -63,18 +69,18 @@ def get_json(url, params, tries=4):
     raise RuntimeError('failed: ' + full[:300])
 
 
-def envelope():
-    w, s, e, n = BBOX
+def envelope(box=None):
+    w, s, e, n = box or BBOX
     return json.dumps({'xmin': w, 'ymin': s, 'xmax': e, 'ymax': n, 'spatialReference': {'wkid': 4326}})
 
 
-def query_all(layer, where, fields, offset_deg, page=1000):
+def query_all(layer, where, fields, offset_deg, page=1000, box=None):
     """Every feature intersecting BBOX, as GeoJSON features, paging by object id order."""
     feats, start = [], 0
     while True:
         params = {
             'where': where, 'outFields': fields, 'returnGeometry': 'true',
-            'geometry': envelope(), 'geometryType': 'esriGeometryEnvelope', 'inSR': 4326,
+            'geometry': envelope(box), 'geometryType': 'esriGeometryEnvelope', 'inSR': 4326,
             'spatialRel': 'esriSpatialRelIntersects', 'outSR': 4326, 'f': 'geojson',
             'resultOffset': start, 'resultRecordCount': page, 'orderByFields': 'OBJECTID',
         }
@@ -94,9 +100,9 @@ def query_all(layer, where, fields, offset_deg, page=1000):
 
 # ---------- geometry helpers ----------
 
-def clip_ring(ring):
-    """Sutherland-Hodgman clip of one ring to BBOX. Returns [] if nothing is left."""
-    w, s, e, n = BBOX
+def clip_ring(ring, box=None):
+    """Sutherland-Hodgman clip of one ring to a box (BBOX by default). Returns [] if nothing is left."""
+    w, s, e, n = box or BBOX
     def clip(points, inside, cross):
         out = []
         if not points:
@@ -153,13 +159,13 @@ def polygons_of(geom):
     return []
 
 
-def clean_polygons(geom, min_area=1e-8):
-    """Clip to BBOX, round, drop slivers. Returns a list of polygons (lists of rings)."""
+def clean_polygons(geom, min_area=1e-8, box=None):
+    """Clip to a box (BBOX by default), round, drop slivers. Returns a list of polygons (lists of rings)."""
     out = []
     for poly in polygons_of(geom):
         rings = []
         for k, ring in enumerate(poly):
-            c = rnd(clip_ring([list(map(float, p[:2])) for p in ring]))
+            c = rnd(clip_ring([list(map(float, p[:2])) for p in ring], box))
             if len(c) < 4 or abs(ring_area(c)) < min_area:
                 if k == 0:
                     rings = []
@@ -229,6 +235,40 @@ def other_public_land():
         if cls == 'blm':
             name = 'Bureau of Land Management'
         out.append(feature(polys, {'c': cls, 'n': name, 'd': p.get('Des_Tp') or ''}))
+    return out
+
+
+def extra_areas():
+    """Named areas outside the main box (for now, BLM's Schnell Recreation Area near Richardton)."""
+    out = []
+    for a in EXTRA_AREAS:
+        log('Extra area:', a['name'])
+        feats = query_all(PADUS, "State_Nm='ND' AND Mang_Name='BLM'", 'OBJECTID,Mang_Name,Unit_Nm', 0.00005, page=50, box=a['bbox'])
+        for f in feats:
+            polys = clean_polygons(f.get('geometry'), min_area=1e-7, box=a['bbox'])
+            if polys:
+                out.append(feature(polys, {'c': 'blm', 'n': a['name'], 'x': a['key']}))
+    return out
+
+
+BIA_LAR = 'https://biamaps.geoplatform.gov/server/rest/services/DivLTR/BIA_AIAN_National_LAR/MapServer/0'
+
+
+def tribal_land():
+    """Reservation boundaries (BIA Land Area Representations). The widget keeps these switched
+    off until the wording is approved; see TRIBAL in docs/camping.js."""
+    log('Reservation boundaries (BIA LAR)')
+    try:
+        feats = query_all(BIA_LAR, '1=1', 'OBJECTID,LARNAME', 0.0003, page=50)
+    except Exception as e:  # noqa: BLE001
+        log('  skipped:', e)
+        return []
+    out = []
+    for f in feats:
+        polys = clean_polygons(f.get('geometry'), min_area=1e-6)
+        if polys:
+            name = (f.get('properties') or {}).get('LARNAME') or ''
+            out.append(feature(polys, {'c': 'tribal', 'n': (name + ' Reservation').strip()}))
     return out
 
 
@@ -327,10 +367,10 @@ COUNTIES = 'https://services1.arcgis.com/qQaNyq8h4wNEdlUV/arcgis/rest/services/F
 def counties():
     """County outlines, so a tapped spot can be matched to that county's burn restrictions."""
     log('County outlines (ND fire danger layer)')
-    feats = query_all(COUNTIES, '1=1', 'OBJECTID,NAME', 0.002, page=100)
+    feats = query_all(COUNTIES, '1=1', 'OBJECTID,NAME', 0.002, page=100, box=COUNTY_BBOX)
     out = []
     for f in feats:
-        polys = clean_polygons(f.get('geometry'), min_area=1e-5)
+        polys = clean_polygons(f.get('geometry'), min_area=1e-5, box=COUNTY_BBOX)
         if polys:
             out.append(feature(polys, {'n': (f.get('properties') or {}).get('NAME')}))
     return out
@@ -346,7 +386,7 @@ def write(name, obj):
 def main():
     os.makedirs(OUT, exist_ok=True)
     now = datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
-    meta = {'built': now, 'bbox': BBOX, 'sources': {}}
+    meta = {'built': now, 'bbox': BBOX, 'extra': EXTRA_AREAS, 'sources': {}}
 
     layers = []
     for key, fn, label in (
@@ -354,6 +394,8 @@ def main():
         ('trust', trust_land, 'ND Department of Trust Lands, Surface Tracts (ND GIS Hub)'),
         ('padus', other_public_land, 'USGS Protected Areas Database of the U.S. (PAD-US) 4.1, Fee'),
         ('boundary', grassland_boundary, 'USDA Forest Service, Administrative Forest Boundaries (EDW)'),
+        ('extra', extra_areas, 'USGS PAD-US 4.1 (BLM), named areas outside the main box'),
+        ('tribal', tribal_land, 'Bureau of Indian Affairs, Land Area Representations'),
     ):
         feats = fn()
         if key in ('usfs', 'trust', 'padus') and not feats:

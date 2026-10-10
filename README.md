@@ -37,7 +37,7 @@ The widget renders in a shadow root, so page styles do not leak in or out. It ca
 
 ## How a spot is classified
 
-The spot is tested against every land polygon. When layers overlap, the first match in this order wins: national park, state trust land, wildlife refuge, state park, wildlife management area, Corps of Engineers, Bureau of Reclamation, BLM, national grassland. On grassland, a spot within a quarter mile (402 m) of a developed site becomes "Too close to a developed site". A spot in no layer is "Private land or unknown"; if it is inside the grassland boundary, the answer says so.
+The spot is tested against every land polygon. Coverage is the main box around the grassland and park, plus named extra areas (`EXTRA_AREAS` in `collector/lands.py`; today, Schnell). When layers overlap, the first match in this order wins: national park, state trust land, wildlife refuge, state park, wildlife management area, Corps of Engineers, Bureau of Reclamation, BLM, national grassland. On grassland, a spot within a quarter mile (402 m) of a developed site becomes "Too close to a developed site". A spot in no layer is "Private land or unknown"; if it is inside the grassland boundary, the answer says so.
 
 | Land | Answer | Rule source |
 |---|---|---|
@@ -45,11 +45,13 @@ The spot is tested against every land polygon. When layers overlap, the first ma
 | Theodore Roosevelt National Park | Permit required (backcountry), or park campgrounds | [NPS backcountry camping](https://www.nps.gov/thro/planyourvisit/backcountry-camping.htm) |
 | State school trust land | No camping, no campfires, walk-in only; "Closed" and "Notify the lessee" tracts flagged | [ND Trust Lands public access](https://www.land.nd.gov/node/154) |
 | BLM | Camping allowed, 14 days in 28 | [BLM camping](https://www.blm.gov/programs/recreation/camping) |
+| Schnell Recreation Area (BLM, near Richardton) | Camping allowed: primitive tent camping except along the nature trail, six sites, no fee, non-motorized | [BLM Schnell page](https://www.blm.gov/visit/schnell-ranch-recreation-area) |
+| Fort Berthold Reservation (**off until approved**) | Check the rules: permission from the MHA Nation or the landowner | Three Affiliated Tribes Fish & Wildlife Division |
 | Wildlife management areas | 10 days; named areas with no overnight camping or closed Tuesday and Wednesday | [ND Game and Fish](https://gf.nd.gov/wma) |
 | State parks, Corps of Engineers | Designated sites only | ND Parks and Recreation; 36 CFR 327.7 |
 | Wildlife refuges | Generally no camping | |
 
-**Campfires.** A campfire is shown as not allowed when the matching restriction (the grassland's ranger district, BLM in that county, or else the county) is declared and either flagged for campfires or set to take effect at a fire danger level that today's rating meets. When in doubt the tool says "check first", never "allowed".
+**Campfires.** A campfire is shown as not allowed when the matching restriction (the grassland's ranger district, BLM in that county, or else the county) is declared and today's fire danger meets the level the declaration names ("Low" means always), or when a Red Flag Warning covers the county. When in doubt the tool says "check first", never "allowed".
 
 **Roads.** "Likely wet" when any of three points (Medora, Watford City, Amidon) had a quarter inch or more of rain in the last three days; "Rain coming" for the next three.
 
@@ -67,6 +69,8 @@ The spot is tested against every land polygon. When layers overlap, the first ma
 | Open-Meteo | Rain and snow, 3 days back and 3 ahead | Browser and `collector/conditions.py` |
 | ND Game and Fish, Electronically Posted Lands (ND GIS Hub `GNF_EpostedLandsCached`) | Whether a private spot is posted, asked live for the tapped point (only the `POSTED` flag is requested; owner names and contacts in the service are never read), and the map's posted-land overlay from the state's own tiles | Browser |
 | USGS The National Map | Topo and imagery basemaps | Browser |
+| BLM Surface Management Agency (`BLM_Natl_SMA_LimitedScale`) | A second opinion for spots no detailed layer covers: if BLM's coarser national map shows a public agency there, the answer adds a note but stays "private or unknown" | Browser |
+| BIA Land Area Representations | Fort Berthold Reservation boundary (only a thin strip falls inside the main box) | `collector/lands.py` |
 
 The Forest Service's Motor Vehicle Use Map for the Little Missouri is not in its public map data, so the roads layer is a reference only; the map says so and links to the Forest Service's maps and guides.
 
@@ -83,6 +87,10 @@ The Forest Service's Motor Vehicle Use Map for the Little Missouri is not in its
 | `collector/conditions.py` | Builds the conditions snapshot (standard library only) |
 | `.github/workflows/lands.yml` | Weekly land refresh (Mondays) |
 | `.github/workflows/conditions.yml` | Conditions every six hours |
+
+## Tribal land (switched off)
+
+The Fort Berthold Reservation answer and map outline are built but stay off until the wording is approved under the Library's editorial review for MHA Nation content. Preview them by adding `?tribal=preview` to any page that embeds the widget (for example `https://www.trlibrary.com/visit/camping?tribal=preview`). After approval, set `data-tribal="on"` on the embed, or change the `TRIBAL` default in `docs/camping.js`. The draft text is the `tribal` entry in `CLASSES`.
 
 ## Upkeep
 
