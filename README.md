@@ -9,8 +9,9 @@ The Badlands around Medora are a patchwork. The Little Missouri National Grassla
 1. **Am I on public land?** One button. With the person's permission it reads the phone's location (on the device; nothing is sent anywhere) and says who manages that ground, whether camping is allowed, and whether a campfire is allowed there today. It warns when the person is close to a boundary or the GPS fix is poor.
 2. **Map.** Public land by manager, quarter-mile no-camping zones around developed Forest Service sites, National Forest System roads, and the grassland boundary. Tap anywhere for the same answer as the button. Uncolored land is private or unknown.
 3. **Today's conditions.** Campfire restrictions (grassland, BLM and each county), the state fire danger rating and 6-day outlook, rain on clay roads, National Weather Service alerts, and the Forest Service orders posted for the grassland.
-4. **Rules by land type** and a short before-you-go list.
-5. **Offline map** at `/map/`. Can be added to a phone's home screen. "Save this area for offline" stores about 5 miles of topo map around the map's center. The land records, the check button and GPS then work with no signal.
+4. **Permits and reservations.** What each kind of land needs, with direct links: the park's free backcountry permit, Recreation.gov pages for Cottonwood, Juniper and Roundup, and ND state park reservations.
+5. **Rules by land type** and a short before-you-go list.
+6. **Offline map** at `/map/`. Can be added to a phone's home screen. "Save this area for offline" stores about 5 miles of topo map around the map's center. The land records, the check button and GPS then work with no signal.
 
 ## Embed
 
@@ -25,6 +26,7 @@ The Badlands around Medora are a patchwork. The Little Missouri National Grassla
 | `data-view="map"` | The button and the map |
 | `data-view="conditions"` | Only today's conditions |
 | `data-view="compact"` | A short conditions summary for a sidebar or the homepage |
+| `data-view="permits"` | Only the permits and reservations links (Recreation.gov, park backcountry permits, state parks) |
 | `data-more="https://..."` | In the compact and check views, where "See the full guide" / "Open the map" go |
 | `data-heading="off"` | Hides the built-in heading and intro |
 | `data-cta="off"` | Hides the campground availability link, or give another address. Default: trlibrary.com/visit/lodging/availability |

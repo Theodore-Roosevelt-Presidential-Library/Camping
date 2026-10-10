@@ -18,6 +18,7 @@
  *   data-view="map"          only the map (with the check button)
  *   data-view="conditions"   only today's conditions
  *   data-view="compact"      a short conditions summary for a sidebar, linking to data-more
+ *   data-view="permits"      only the permits and reservations links
  *   data-view="app"          full-screen layout used by the offline map at /map/
  *   data-heading="off"       hide the built-in heading and intro
  *   data-more="https://..."  where "See the full guide" goes in the compact view
@@ -54,6 +55,7 @@
     conditions: VIEW === 'full' || VIEW === 'conditions' || APP,
     compact: VIEW === 'compact',
     rules: VIEW === 'full',
+    permits: VIEW === 'full' || VIEW === 'permits' || APP,
     offline: APP && 'caches' in window
   };
   var CTA = opts.cta === 'off' ? null : (opts.cta || 'https://www.trlibrary.com/visit/lodging/availability');
@@ -96,6 +98,12 @@
     offroadOrder: 'https://www.fs.usda.gov/r01/dpg/alerts/area-closure-vehicles-road-little-missouri-national-grassland',
     npsBackcountry: 'https://www.nps.gov/thro/planyourvisit/backcountry-camping.htm',
     npsCamping: 'https://www.nps.gov/thro/planyourvisit/camping.htm',
+    cottonwood: 'https://www.recreation.gov/camping/campgrounds/251160',
+    cottonwoodGroup: 'https://www.recreation.gov/camping/campgrounds/10294670',
+    juniper: 'https://www.recreation.gov/camping/campgrounds/10386756',
+    juniperGroup: 'https://www.recreation.gov/camping/campgrounds/72481',
+    roundup: 'https://www.recreation.gov/camping/campgrounds/251161',
+    dpgCampgrounds: 'https://www.fs.usda.gov/r01/dpg/recreation/what-expect-when-camping-grasslands',
     trust: 'https://www.land.nd.gov/node/154',
     wma: 'https://gf.nd.gov/wma',
     blm: 'https://www.blm.gov/programs/recreation/camping',
@@ -148,7 +156,7 @@
           'Camping in the backcountry is limited to 14 days in a row.'
         ];
       },
-      links: [['Backcountry camping and permits', LINKS.npsBackcountry], ['Park campgrounds', LINKS.npsCamping]],
+      links: [['Get a free backcountry permit', LINKS.npsBackcountry], ['Reserve Cottonwood Campground (South Unit)', LINKS.cottonwood], ['Reserve Juniper Campground (North Unit)', LINKS.juniper]],
       contact: 'Theodore Roosevelt National Park: (701)\u00a0623\u20114466.'
     },
     trust: {
@@ -245,6 +253,42 @@
       links: [], contact: ''
     }
   };
+  // Permits and reservations, by land. Recreation.gov IDs checked against the park's camping page (October 2026).
+  var PERMITS = [
+    { land: 'Little Missouri National Grassland', need: 'No permit for dispersed camping',
+      text: 'Free, up to 14 days in one spot. Forest Service campgrounds on the grassland have their own fees and rules.',
+      links: [['Forest Service camping rules', LINKS.dpgDispersed], ['Grassland campgrounds', LINKS.dpgCampgrounds]] },
+    { land: 'Theodore Roosevelt National Park, backcountry', need: 'Free backcountry permit',
+      text: 'Required for every overnight stay in the backcountry. Get it from a park visitor center; have your group size, nights and route ready.',
+      links: [['Backcountry permits', LINKS.npsBackcountry]] },
+    { land: 'Theodore Roosevelt National Park, campgrounds', need: 'Reservation on Recreation.gov',
+      text: 'The park cannot take reservations directly.',
+      links: [['Cottonwood Campground (South Unit)', LINKS.cottonwood], ['Cottonwood group site', LINKS.cottonwoodGroup], ['Juniper Campground (North Unit)', LINKS.juniper], ['Juniper group site', LINKS.juniperGroup], ['Roundup Group Horse Camp', LINKS.roundup]] },
+    { land: 'North Dakota state parks', need: 'Reservation',
+      text: 'Includes Rough Rider State Park near Medora.',
+      links: [['Reserve a state park campsite', LINKS.parks]] },
+    { land: 'Wildlife management areas', need: 'No permit',
+      text: 'Up to 10 days where camping is allowed. Some areas ban camping or close Tuesdays and Wednesdays.',
+      links: [['Wildlife management area rules', LINKS.wma]] },
+    { land: 'State school trust land', need: 'Camping not allowed',
+      text: 'No permit makes camping legal here. Walk-in recreation only.',
+      links: [['Trust land public access rules', LINKS.trust]] }
+  ];
+  function permitsSection() {
+    var sec = el('section', { 'aria-label': 'Permits and reservations' });
+    sec.appendChild(el('h3', { text: 'Permits and reservations' }));
+    var list = el('div', { class: 'cards' });
+    PERMITS.forEach(function (p) {
+      var c = el('div', { class: 'card' }, [el('h4', { text: p.land }), el('p', { class: 'need', text: p.need }), el('p', { text: p.text })]);
+      var ul = el('ul', { class: 'plinks' });
+      p.links.forEach(function (l) { ul.appendChild(el('li', {}, [el('a', { href: l[1], target: '_blank', rel: 'noopener', text: l[0] })])); });
+      c.appendChild(ul);
+      list.appendChild(c);
+    });
+    sec.appendChild(list);
+    return sec;
+  }
+
   // When layers overlap, the more restrictive or more specific one wins.
   var PRECEDENCE = ['nps', 'trust', 'fws', 'park', 'wma', 'usace', 'usbr', 'blm', 'usfs'];
 
@@ -252,6 +296,7 @@
   var WMA_NO_CAMPING = ['alkali creek', 'spring creek', 'antelope creek', 'big oxbow', 'lewis and clark', 'neu', 'och', 'overlook',
     'sullivan', 'tweden', 'tobacco garden', 'hofflund', 'kerr slough', 'trenton', 'van hook'];
   var WMA_TUE_WED = ['bull creek', 'killdeer mountain', 'camel', 'cedar lake', 'speck davis', 'smishek', 'short creek', 'baukol', 'mcgregor'];
+  var RENAMED = { 'Sully Creek State Recreation Area': 'Rough Rider State Park' };   // renamed by ND Parks and Recreation
   var WMA_NAMES = { 'neu': 'Neu\u2019s Point', 'ochs': 'Och\u2019s Point', 'camel hump': 'Camels Hump Lake' };
   function wmaName(name) {
     var n = String(name || '').replace(/ Wildlife Management Area$/i, '');
@@ -381,6 +426,9 @@
     '.tips li{margin:0 0 6px}',
     '.note{font-family:' + SANS + ';font-size:.78rem;color:var(--muted);margin:2em 0 0;max-width:62em}',
     '.compact .card{margin-bottom:10px}',
+    '.card .need{font-weight:700;color:var(--forest);margin:2px 0 6px}',
+    '.plinks{margin:6px 0 0;padding-left:1.1em;font-family:' + SANS + ';font-size:.9rem}',
+    '.plinks li{margin:0 0 4px}',
     '@container (max-width:560px){.check{padding:18px 16px}.btn{width:100%}.answer .actions .btn{width:auto;flex:1}.legend{font-size:.8rem}}'
   ].join('\n');
 
@@ -622,7 +670,7 @@
       answer.appendChild(el('span', { class: 'verdict', text: st.word, style: 'background:' + st.bg + ';color:' + st.ink }));
       var place = cls.label;
       if (res.cls === 'wma') place = wmaName(res.props.n);
-      else if (res.cls === 'park' || res.cls === 'usace' || res.cls === 'usbr' || res.cls === 'fws') place = res.props.n || cls.label;
+      else if (res.cls === 'park' || res.cls === 'usace' || res.cls === 'usbr' || res.cls === 'fws') place = RENAMED[res.props.n] || res.props.n || cls.label;
       answer.appendChild(el('p', { class: 'place', text: place }));
       var who = cls.who;
       if (res.cls === 'trust' && res.props.l) who += ' \u00b7 ' + [res.props.q, res.props.l].filter(Boolean).join(' ');
@@ -1024,6 +1072,7 @@
   function buildRules() {
     if (!rulesSlot) return;
     rulesSlot.innerHTML = '';
+    rulesSlot.appendChild(permitsSection());
     var rs = el('section', { 'aria-label': 'Rules by land type' });
     rs.appendChild(el('h3', { text: 'The rules, by land type' }));
     ['usfs', 'nps', 'trust', 'blm', 'wma', 'park', 'private'].forEach(function (k) {
@@ -1068,6 +1117,8 @@
       if (state.meta && state.meta.built) stampEl.textContent = 'Land records last refreshed ' + fmtDate(state.meta.built) + '.';
     }).catch(function () {});
   }
+
+  if (SHOW.permits && !SHOW.rules) wrap.appendChild(permitsSection());
 
   // ---------- start ----------
   if (SHOW.conditions || SHOW.compact || SHOW.check || SHOW.rules) loadConditions();
