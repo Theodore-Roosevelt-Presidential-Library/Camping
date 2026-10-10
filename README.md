@@ -65,6 +65,7 @@ The spot is tested against every land polygon. When layers overlap, the first ma
 | Dakota Prairie Grasslands alerts page | Forest Service orders | `collector/conditions.py` |
 | National Weather Service alerts API | Watches and warnings | Browser and `collector/conditions.py` |
 | Open-Meteo | Rain and snow, 3 days back and 3 ahead | Browser and `collector/conditions.py` |
+| ND Game and Fish, Electronically Posted Lands (ND GIS Hub `GNF_EpostedLandsCached`) | Whether a private spot is posted, asked live for the tapped point (only the `POSTED` flag is requested; owner names and contacts in the service are never read), and the map's posted-land overlay from the state's own tiles | Browser |
 | USGS The National Map | Topo and imagery basemaps | Browser |
 
 The Forest Service's Motor Vehicle Use Map for the Little Missouri is not in its public map data, so the roads layer is a reference only; the map says so and links to the Forest Service's maps and guides.
@@ -86,6 +87,7 @@ The Forest Service's Motor Vehicle Use Map for the Little Missouri is not in its
 ## Upkeep
 
 - Rules live in `CLASSES` near the top of `docs/camping.js`. The wildlife management area lists (`WMA_NO_CAMPING`, `WMA_TUE_WED`) come from gf.nd.gov/wma; check them each spring.
+- **Forest Service orders changed issue.** When the alerts posted on the Dakota Prairie Grasslands page change (an order added or removed, or the off-road or fire flag flips), the conditions workflow opens a GitHub issue. The tool updates itself, but the FAQ on trlibrary.com/visit/camping repeats some orders in plain text and needs a person to edit it.
 - The off-road vehicle sentence switches automatically: it appears while a "Vehicles Off Road" alert is posted on the Dakota Prairie Grasslands alerts page (`flags.offroad_closed` in conditions.json). The order runs through July 22, 2028.
 - If a source changes shape, the collectors keep the last good file rather than writing an empty one. Run either workflow from the Actions tab to refresh by hand.
 

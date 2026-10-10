@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 concurrency:
   group: conditions
@@ -30,3 +31,9 @@ jobs:
           git diff --cached --quiet || git commit -m "Refresh conditions"
           git pull --rebase --quiet || true
           git push
+      - name: Open an issue when Forest Service orders change
+        if: hashFiles('orders-changed.md') != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue create --title "Forest Service orders changed: check the /visit/camping page" --body-file orders-changed.md

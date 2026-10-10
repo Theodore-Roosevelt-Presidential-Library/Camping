@@ -203,6 +203,26 @@ def main():
             data.setdefault('stale', []).append(key)
         data[key] = val
     data['flags'] = flags(data.get('orders'))
+    # What changed since the last snapshot, so the workflow can open an issue for staff.
+    # The /visit/camping FAQ repeats some of these orders in plain text and needs a manual edit
+    # when they end (for example the off-road vehicle closure, Order 01-18-00-26-03).
+    if 'orders' not in (data.get('stale') or []) and prev.get('orders') is not None:
+        old = {o['url']: o['title'] for o in prev.get('orders') or []}
+        new = {o['url']: o['title'] for o in data.get('orders') or []}
+        changes = {'added': [new[u] for u in new if u not in old], 'removed': [old[u] for u in old if u not in new],
+                   'flags': {k: [prev.get('flags', {}).get(k), v] for k, v in data['flags'].items() if prev.get('flags', {}).get(k) != v}}
+        if changes['added'] or changes['removed'] or changes['flags']:
+            with open(os.path.join(os.path.dirname(OUT), '..', '..', 'orders-changed.md'), 'w') as fh:
+                fh.write('The Dakota Prairie Grasslands alerts page changed.\n\n')
+                for t in changes['added']:
+                    fh.write('- Added: %s\n' % t)
+                for t in changes['removed']:
+                    fh.write('- Removed: %s\n' % t)
+                for k, (a, b) in changes['flags'].items():
+                    fh.write('- `%s` changed from %s to %s\n' % (k, a, b))
+                fh.write('\nThe tool updates itself. Check the text on https://www.trlibrary.com/visit/camping, '
+                         'especially the FAQ answers on campfires and on driving off the road, and edit them if an order they describe has ended.\n'
+                         'Alerts: https://www.fs.usda.gov/r01/dpg/alerts\n')
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     with open(OUT, 'w') as fh:
         json.dump(data, fh, indent=1)

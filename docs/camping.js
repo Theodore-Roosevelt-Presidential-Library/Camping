@@ -90,6 +90,9 @@
     imagery: 'https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryTopo/MapServer/tile/{z}/{y}/{x}'
   };
   var TILE_CACHE = 'trpl-camping-tiles-v1';
+  // Private land the owner has posted electronically with ND Game and Fish. Only the POSTED flag is
+  // requested; the service also holds owner names and contact details, which this tool never reads.
+  var EPOST = 'https://ndgishub.nd.gov/arcgis/rest/services/Applications/GNF_EpostedLandsCached/MapServer';
 
   var LINKS = {
     dpgDispersed: 'https://www.fs.usda.gov/r01/dpg/recreation/dispersed-camping',
@@ -108,7 +111,9 @@
     wma: 'https://gf.nd.gov/wma',
     blm: 'https://www.blm.gov/programs/recreation/camping',
     parks: 'https://www.reservendparks.com/',
-    burn: 'https://burnrestrictions.nd.gov'
+    burn: 'https://burnrestrictions.nd.gov',
+    postingMap: 'https://geocortex.gf.nd.gov/Html5Viewer/',
+    privateLands: 'https://gf.nd.gov/node/400'
   };
 
   // ---------- what each kind of land means for a camper ----------
@@ -247,10 +252,11 @@
         var r = [];
         if (p && p.inside) r.push('This spot is inside the national grassland boundary, but this parcel is not Forest Service land. The grassland is a patchwork of public, state and private land.');
         r.push('Treat it as private. Do not camp, build a fire or drive off the road here without the landowner\u2019s permission.');
+        r.push('Many owners post their land electronically with North Dakota Game and Fish instead of with signs, so a missing sign does not mean the land is open.');
         r.push('Look for public land nearby on the map below.');
         return r;
       },
-      links: [], contact: ''
+      links: [['ND Game and Fish posted land map', LINKS.postingMap], ['Rules for posted private land', LINKS.privateLands]], contact: ''
     }
   };
   // Permits and reservations, by land. Recreation.gov IDs checked against the park's camping page (October 2026).
@@ -371,6 +377,9 @@
     '.answer .meta{font-family:' + SANS + ';font-size:.8rem;color:var(--muted);margin:10px 0 0}',
     '.answer .links{font-family:' + SANS + ';font-size:.9rem;margin:8px 0 0;display:flex;flex-wrap:wrap;gap:6px 16px}',
     '.answer .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}',
+    '.answer .posted.on{border-color:#C2405C;background:#FDE8EC}',
+    '.answer .posted.off{border-color:var(--sand);background:var(--wash)}',
+    '.sw.posted{background:repeating-linear-gradient(45deg,#E7805D 0 2px,transparent 2px 5px);border-color:#E7805D}',
     '.err{margin-top:14px;background:#FFF9DA;color:var(--ink);padding:12px 14px;border-radius:2px}',
     // map
     '.mapwrap{position:relative;margin-top:14px}',
@@ -693,6 +702,7 @@
       cls.links.forEach(function (l) { links.appendChild(el('a', { href: l[1], target: '_blank', rel: 'noopener', text: l[0] })); });
       if (links.childNodes.length) answer.appendChild(links);
       if (cls.contact) answer.appendChild(el('p', { class: 'meta', text: cls.contact }));
+      if (res.cls === 'private') checkPosted(lat, lng);
     }
     var coords = lat.toFixed(5) + ', ' + lng.toFixed(5);
     answer.appendChild(el('p', { class: 'meta', text: (fromGps && accuracy ? 'Location ' + coords + ' (within ' + Math.round(accuracy * 3.281) + ' ft). ' : 'Location ' + coords + '. ') +
@@ -707,6 +717,32 @@
     try { answer.focus({ preventScroll: !fromGps }); } catch (e) { /* older browsers */ }
   }
 
+  // Is this private spot electronically posted? Asked live, because postings change often.
+  var postedSeq = 0;
+  function checkPosted(lat, lng) {
+    var seq = ++postedSeq;
+    var box = el('div', { class: 'warn posted', text: 'Checking whether the owner has posted this land\u2026' });
+    var place = answer.querySelector('.who');
+    if (place && place.nextSibling) answer.insertBefore(box, place.nextSibling); else answer.appendChild(box);
+    var url = EPOST + '/0/query?geometry=' + lng.toFixed(6) + ',' + lat.toFixed(6) + '&geometryType=esriGeometryPoint&inSR=4326' +
+      '&spatialRel=esriSpatialRelIntersects&outFields=POSTED&returnGeometry=false&f=json';
+    getJSON(url, 12000).then(function (j) {
+      if (seq !== postedSeq) return;
+      var posted = (j.features || []).some(function (f) { return f.attributes && f.attributes.POSTED === 'Y'; });
+      if (posted) {
+        box.className = 'warn posted on';
+        box.innerHTML = '<b>Posted private land.</b> The owner has posted this parcel electronically with North Dakota Game and Fish. No hunting without permission, and no camping without the owner\u2019s permission.';
+      } else {
+        box.className = 'warn posted off';
+        box.textContent = 'This parcel is not electronically posted, but it is still private or unknown land. Camping here needs the owner\u2019s permission.';
+      }
+    }).catch(function () {
+      if (seq !== postedSeq) return;
+      box.className = 'warn posted';
+      box.innerHTML = 'Could not check electronic posting right now (no signal?). Treat this as private land, or check the <a href="' + LINKS.postingMap + '" target="_blank" rel="noopener">ND Game and Fish posted land map</a>.';
+    });
+  }
+
   // --- the map ---
   var mapEl, mapReady = null, loadingNote;
   if (SHOW.map) {
@@ -717,7 +753,8 @@
     var bTopo = el('button', { class: 'chip', type: 'button', 'aria-pressed': 'true', onclick: function () { setBase('topo'); } }, ['Topo']);
     var bImg = el('button', { class: 'chip', type: 'button', 'aria-pressed': 'false', onclick: function () { setBase('imagery'); } }, ['Satellite']);
     var bRoads = el('button', { class: 'chip', type: 'button', 'aria-pressed': 'true', onclick: function () { toggleRoads(); } }, ['Forest roads']);
-    bar.appendChild(bTopo); bar.appendChild(bImg); bar.appendChild(bRoads);
+    var bPosted = el('button', { class: 'chip', type: 'button', 'aria-pressed': 'true', onclick: function () { togglePosted(); } }, ['Posted private land']);
+    bar.appendChild(bTopo); bar.appendChild(bImg); bar.appendChild(bRoads); bar.appendChild(bPosted);
     if (SHOW.offline) bar.appendChild(el('button', { class: 'chip', type: 'button', onclick: saveArea }, ['Save this area for offline']));
     if (!APP) bar.appendChild(el('a', { class: 'chip', href: APP_URL, target: '_blank', rel: 'noopener', style: 'display:inline-flex;align-items:center;text-decoration:none' }, ['Full-screen map (works offline)']));
     msec.appendChild(bar);
@@ -731,6 +768,7 @@
       lg.appendChild(el('li', {}, [el('span', { class: 'sw', style: 'background:' + CLASSES[k].fill + ';opacity:.75' }), CLASSES[k].legend]));
     });
     lg.appendChild(el('li', {}, [el('span', { class: 'sw ring' }), 'Quarter mile around developed sites (no camping)']));
+    lg.appendChild(el('li', {}, [el('span', { class: 'sw posted' }), 'Private land posted electronically (zoom in)']));
     lg.appendChild(el('li', {}, [el('span', { class: 'sw road' }), 'Forest Service road']));
     lg.appendChild(el('li', {}, [el('span', { class: 'sw bnd' }), 'Grassland boundary']));
     lg.appendChild(el('li', {}, [el('span', { class: 'sw none' }), 'No color: private or unknown']));
@@ -806,6 +844,9 @@
         });
         syncRoads();
       }).catch(function () { /* roads are a nice-to-have */ });
+      // Electronically posted private land, drawn from ND Game and Fish's own map tiles.
+      state.layers.posted = L.tileLayer(EPOST + '/tile/{z}/{y}/{x}', { minZoom: 11, maxNativeZoom: 16, maxZoom: 17, opacity: 0.75,
+        attribution: 'Posted land: <a href="https://gf.nd.gov/node/400" target="_blank" rel="noopener">ND Game and Fish</a>' });
       map.on('zoomend', syncRoads);
       syncRoads();
 
@@ -828,11 +869,18 @@
       if (bWant && !m.hasLayer(state.layers.boundary)) state.layers.boundary.addTo(m);
       if (!bWant && m.hasLayer(state.layers.boundary)) m.removeLayer(state.layers.boundary);
     }
+    if (m && state.layers.posted) {
+      var pWant = postedOn && m.getZoom() >= 11;
+      if (pWant && !m.hasLayer(state.layers.posted)) state.layers.posted.addTo(m);
+      if (!pWant && m.hasLayer(state.layers.posted)) m.removeLayer(state.layers.posted);
+    }
     if (!r || !m) return;
     var want = roadsOn && m.getZoom() >= 10;
     if (want && !m.hasLayer(r)) r.addTo(m);
     if (!want && m.hasLayer(r)) m.removeLayer(r);
   }
+  var postedOn = true;
+  function togglePosted() { postedOn = !postedOn; bPosted.setAttribute('aria-pressed', String(postedOn)); syncRoads(); }
   function toggleRoads() { roadsOn = !roadsOn; bRoads.setAttribute('aria-pressed', String(roadsOn)); syncRoads(); }
   function setBase(k) {
     if (!state.map) return;
@@ -864,7 +912,10 @@
       var x0 = Math.floor((c.lng - dLng + 180) / 360 * n), x1 = Math.floor((c.lng + dLng + 180) / 360 * n);
       function ty(lat) { var r = lat * Math.PI / 180; return Math.floor((1 - Math.log(Math.tan(r) + 1 / Math.cos(r)) / Math.PI) / 2 * n); }
       var y0 = ty(c.lat + dLat), y1 = ty(c.lat - dLat);
-      for (var x = x0; x <= x1; x++) for (var y = y0; y <= y1; y++) urls.push(TILES.topo.replace('{z}', z).replace('{y}', y).replace('{x}', x));
+      for (var x = x0; x <= x1; x++) for (var y = y0; y <= y1; y++) {
+        urls.push(TILES.topo.replace('{z}', z).replace('{y}', y).replace('{x}', x));
+        if (z >= 11) urls.push(EPOST + '/tile/' + z + '/' + y + '/' + x);
+      }
     }
     savedNote.textContent = 'Saving ' + urls.length + ' map tiles around the center of the map\u2026';
     caches.open(TILE_CACHE).then(function (cache) {
@@ -880,7 +931,7 @@
       }
       return Promise.all([next(), next(), next(), next()]);
     }).then(function () {
-      savedNote.textContent = 'Saved. The land layers and about 5 miles of topo map around this spot will work with no signal. Location still works offline.';
+      savedNote.textContent = 'Saved. The land layers, posted private land and about 5 miles of topo map around this spot will work with no signal. Location still works offline.';
     }).catch(function () { savedNote.textContent = 'Could not save tiles on this device.'; });
   }
 

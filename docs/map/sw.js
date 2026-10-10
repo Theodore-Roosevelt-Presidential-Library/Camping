@@ -1,7 +1,7 @@
 /* Offline support for the public land map. Keeps the app, the land records and any map tiles
  * the person has viewed or saved, so the map and the "Am I on public land?" check work with no
  * signal. Location never passes through here; the browser reads it on the device. */
-var APP_CACHE = 'trpl-camping-app-v1';
+var APP_CACHE = 'trpl-camping-app-v2';
 var DATA_CACHE = 'trpl-camping-data-v1';
 var TILE_CACHE = 'trpl-camping-tiles-v1';
 var MAX_TILES = 4000;
@@ -42,7 +42,7 @@ self.addEventListener('fetch', function (e) {
   var req = e.request;
   if (req.method !== 'GET') return;
   var url = new URL(req.url);
-  if (url.hostname === 'basemap.nationalmap.gov') {
+  if (url.hostname === 'basemap.nationalmap.gov' || (url.hostname === 'ndgishub.nd.gov' && url.pathname.indexOf('/tile/') >= 0)) {
     // Map tiles: cache first, then keep what was fetched.
     e.respondWith(caches.open(TILE_CACHE).then(function (c) {
       return c.match(req.url).then(function (hit) {
