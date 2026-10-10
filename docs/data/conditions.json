@@ -1,0 +1,436 @@
+{
+ "built": "2026-10-10T03:22:07Z",
+ "fire": {
+  "danger": [
+   {
+    "county": "Billings",
+    "today": 3,
+    "days": [
+     3,
+     1,
+     1,
+     1,
+     1,
+     2
+    ]
+   },
+   {
+    "county": "Golden Valley",
+    "today": 3,
+    "days": [
+     3,
+     1,
+     1,
+     1,
+     1,
+     2
+    ]
+   },
+   {
+    "county": "McKenzie",
+    "today": 3,
+    "days": [
+     2,
+     1,
+     1,
+     1,
+     1,
+     2
+    ]
+   },
+   {
+    "county": "Slope",
+    "today": 3,
+    "days": [
+     3,
+     1,
+     1,
+     1,
+     1,
+     2
+    ]
+   },
+   {
+    "county": "Stark",
+    "today": 2,
+    "days": [
+     2,
+     1,
+     1,
+     1,
+     1,
+     2
+    ]
+   },
+   {
+    "county": "Dunn",
+    "today": 2,
+    "days": [
+     2,
+     1,
+     1,
+     1,
+     1,
+     2
+    ]
+   },
+   {
+    "county": "Bowman",
+    "today": 3,
+    "days": [
+     3,
+     1,
+     1,
+     1,
+     1,
+     2
+    ]
+   }
+  ],
+  "restrictions": [
+   {
+    "kind": "county",
+    "name": "McKenzie",
+    "declared": true,
+    "campfires_at": "Low",
+    "campfires_flag": true,
+    "camping_at": null,
+    "index": 3,
+    "expires": "2027-01-01T06:00:00Z",
+    "note": "This declaration includes all of McKenzie County."
+   },
+   {
+    "kind": "county",
+    "name": "Dunn",
+    "declared": true,
+    "campfires_at": "High",
+    "campfires_flag": true,
+    "camping_at": null,
+    "index": 2,
+    "expires": "2027-01-01T06:00:00Z",
+    "note": "Includes: Dodge, Halliday, Dunn Center, & Killdeer\r\nKilldeer also has additional ordinance"
+   },
+   {
+    "kind": "county",
+    "name": "Golden Valley",
+    "declared": true,
+    "campfires_at": "Very High",
+    "campfires_flag": true,
+    "camping_at": null,
+    "index": 3,
+    "expires": null,
+    "note": "Includes all cities in Golden Valley County (Beach, Golva and Sentinel Butte)"
+   },
+   {
+    "kind": "county",
+    "name": "Billings",
+    "declared": true,
+    "campfires_at": "Low",
+    "campfires_flag": false,
+    "camping_at": null,
+    "index": 3,
+    "expires": "2027-01-01T06:00:00Z",
+    "note": "Includes the cities of Medora, Fryburg, and Fairfield."
+   },
+   {
+    "kind": "county",
+    "name": "Stark",
+    "declared": true,
+    "campfires_at": "High",
+    "campfires_flag": true,
+    "camping_at": "Extreme",
+    "index": 2,
+    "expires": "2027-01-01T06:00:00Z",
+    "note": "Burn restriction includes all incorporated cities within Stark County. City of Dickinson Residents - please refer to the information at www.dickinsonfire.com for specific ordinances enacted within the City of Dickinson limits."
+   },
+   {
+    "kind": "county",
+    "name": "Bowman",
+    "declared": true,
+    "campfires_at": "Low",
+    "campfires_flag": true,
+    "camping_at": "Low",
+    "index": 3,
+    "expires": "2027-01-01T06:00:00Z",
+    "note": "Cities in Bowman County are not included in the County Burn Restriction"
+   },
+   {
+    "kind": "county",
+    "name": "Slope",
+    "declared": true,
+    "campfires_at": "Low",
+    "campfires_flag": true,
+    "camping_at": null,
+    "index": 3,
+    "expires": "2027-01-01T06:00:00Z",
+    "note": "Includes all cities in Slope County."
+   },
+   {
+    "kind": "usfs",
+    "name": "Medora District",
+    "declared": true,
+    "campfires_at": "Low",
+    "campfires_flag": true,
+    "camping_at": null,
+    "index": 3,
+    "expires": "2027-01-01T06:00:00Z",
+    "note": ""
+   },
+   {
+    "kind": "usfs",
+    "name": "McKenzie District",
+    "declared": true,
+    "campfires_at": "Low",
+    "campfires_flag": true,
+    "camping_at": null,
+    "index": 2,
+    "expires": "2027-01-01T06:00:00Z",
+    "note": ""
+   },
+   {
+    "kind": "blm",
+    "name": "Bowman",
+    "declared": true,
+    "campfires_at": "High",
+    "campfires_flag": true,
+    "camping_at": null,
+    "index": 3,
+    "expires": "2027-01-01T06:00:00Z",
+    "note": ""
+   },
+   {
+    "kind": "blm",
+    "name": "Stark",
+    "declared": true,
+    "campfires_at": "High",
+    "campfires_flag": true,
+    "camping_at": null,
+    "index": 2,
+    "expires": "2027-01-01T06:00:00Z",
+    "note": ""
+   },
+   {
+    "kind": "blm",
+    "name": "Golden Valley",
+    "declared": true,
+    "campfires_at": "High",
+    "campfires_flag": true,
+    "camping_at": null,
+    "index": 3,
+    "expires": "2027-01-01T06:00:00Z",
+    "note": ""
+   },
+   {
+    "kind": "blm",
+    "name": "Dunn",
+    "declared": true,
+    "campfires_at": "High",
+    "campfires_flag": true,
+    "camping_at": null,
+    "index": 2,
+    "expires": "2027-01-01T06:00:00Z",
+    "note": ""
+   },
+   {
+    "kind": "blm",
+    "name": "McKenzie",
+    "declared": true,
+    "campfires_at": "High",
+    "campfires_flag": true,
+    "camping_at": null,
+    "index": 3,
+    "expires": "2027-01-01T06:00:00Z",
+    "note": ""
+   }
+  ],
+  "published": "2026-10-09T04:15:00Z"
+ },
+ "orders": [
+  {
+   "title": "Little Missouri National Grassland - Fire Restriction Order 01-18-00-26-08",
+   "url": "https://www.fs.usda.gov/r01/dpg/alerts/little-missouri-national-grassland-fire-restriction-order-01-18-00-26-08",
+   "summary": "This Fire Restriction Order for the Little Missouri National Grasslands covers the National Forest System lands in Slope, Golden Valley, Billings, and McKenzie counties and is effective from September 4 through December 31, 2026. For details, contact local ranger district offices.",
+   "start": "September 4, 2026",
+   "end": null,
+   "order": "01-18-00-26-08"
+  },
+  {
+   "title": "Firewood Use and Possession Restrictions",
+   "url": "https://www.fs.usda.gov/r01/dpg/alerts/firewood-use-and-possession-restrictions",
+   "summary": "",
+   "start": null,
+   "end": null,
+   "order": null
+  },
+  {
+   "title": "North Dakota Burn Restrictions & Fire Danger Maps",
+   "url": "https://www.fs.usda.gov/r01/dpg/alerts/north-dakota-burn-restrictions-fire-danger-maps",
+   "summary": "Check for restrictions before burning and participating in outdoor activities.It is critical that you verify current restrictions before burning or participating in outdoor activities. Conditions may develop throughout the day, such as the issuance of a Red Flag Warning, resulting in a change in\u2026",
+   "start": "March 1, 2026",
+   "end": null,
+   "order": null
+  },
+  {
+   "title": "AREA CLOSURE - Vehicles Off Road - Little Missouri National Grassland",
+   "url": "https://www.fs.usda.gov/r01/dpg/alerts/area-closure-vehicles-road-little-missouri-national-grassland",
+   "summary": "The Forest Service is closing all National Forest System lands in the Little Missouri National Grasslands to off-road vehicle use from July 22, 2026, to July 22, 2028. Exceptions apply for permitted users, official duties, and certain authorized special uses. The order aims to protect wildlife,\u2026",
+   "start": "July 22, 2026",
+   "end": null,
+   "order": "01-18-00-26-03"
+  },
+  {
+   "title": "Road Closure-NFSR 735A-9",
+   "url": "https://www.fs.usda.gov/r01/dpg/alerts/road-closure-nfsr-735a-9",
+   "summary": "Effective July 10, 2026 at 5:00 PM MDT, the Medora Ranger District has closed National Forest System Road (NFSR) 735A\u20119 due to road damage that poses public safety concerns. The closure will remain in place through December 31, 2026 at 11:59 PM MST, unless rescinded earlier.",
+   "start": "July 10, 2026",
+   "end": null,
+   "order": null
+  },
+  {
+   "title": "Little Missouri National Grassland Fire Closure Order # 01-18-00-26-02",
+   "url": "https://www.fs.usda.gov/r01/dpg/alerts/little-missouri-national-grassland-fire-closure-order-01-18-00-26-02",
+   "summary": "This order restricts campfires, smoking outside safe areas, and driving wheeled vehicles on Prairie Two Track roads in the Little Missouri National Grassland whenever fire danger is High or above, or during Red Flag Warnings. Some exceptions apply, such as propane stoves, certain permitted\u2026",
+   "start": "June 26, 2026",
+   "end": null,
+   "order": "01-18-00-26-02"
+  },
+  {
+   "title": "Road Closure- National Forest System Roads #747 and 7471 Medora Ranger District",
+   "url": "https://www.fs.usda.gov/r01/dpg/alerts/road-closure-national-forest-system-roads-747-and-7471-medora-ranger-district",
+   "summary": "Road Closure- National Forest System Roads #747 and 7471 Medora Ranger District",
+   "start": "August 18, 2024",
+   "end": null,
+   "order": "01-18-07-24-01"
+  }
+ ],
+ "weather": [],
+ "rain": [
+  {
+   "place": "Medora",
+   "dates": [
+    "2026-10-06",
+    "2026-10-07",
+    "2026-10-08",
+    "2026-10-09",
+    "2026-10-10",
+    "2026-10-11",
+    "2026-10-12"
+   ],
+   "precip": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.016,
+    0.307,
+    0.531
+   ],
+   "snow": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.055
+   ],
+   "chance": [
+    0,
+    0,
+    0,
+    0,
+    8,
+    74,
+    94
+   ],
+   "past3": 0,
+   "next3": 0.85
+  },
+  {
+   "place": "North Unit / Watford City",
+   "dates": [
+    "2026-10-06",
+    "2026-10-07",
+    "2026-10-08",
+    "2026-10-09",
+    "2026-10-10",
+    "2026-10-11",
+    "2026-10-12"
+   ],
+   "precip": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.016,
+    0.209,
+    0.264
+   ],
+   "snow": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "chance": [
+    1,
+    1,
+    1,
+    0,
+    3,
+    74,
+    94
+   ],
+   "past3": 0,
+   "next3": 0.49
+  },
+  {
+   "place": "Southern grassland (Amidon)",
+   "dates": [
+    "2026-10-06",
+    "2026-10-07",
+    "2026-10-08",
+    "2026-10-09",
+    "2026-10-10",
+    "2026-10-11",
+    "2026-10-12"
+   ],
+   "precip": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.201,
+    0.461
+   ],
+   "snow": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.248
+   ],
+   "chance": [
+    0,
+    0,
+    0,
+    0,
+    2,
+    76,
+    88
+   ],
+   "past3": 0,
+   "next3": 0.66
+  }
+ ],
+ "flags": {
+  "offroad_closed": true,
+  "fire_order": true
+ }
+}

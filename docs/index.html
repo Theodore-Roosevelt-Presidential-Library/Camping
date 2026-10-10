@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Camping on Public Land | Theodore Roosevelt Presidential Library</title>
+<style>
+  body{margin:0;font-family:"Frutiger","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:16px;color:#25282A;background:#fff}
+  main{max-width:1100px;margin:0 auto;padding:32px 20px 64px}
+  .dev{margin-top:56px;padding:20px;border:1px dashed #9A9C9A;border-radius:2px;font-size:15px;background:#F4F2EC}
+  .dev h2{font-size:17px;margin:0 0 8px}
+  .dev h3{font-size:15px;margin:20px 0 6px}
+  pre{overflow:auto;background:#fff;border:1px solid #D8D5CC;padding:12px;font-size:13px}
+  a{color:#1B4532}
+  .compact{max-width:420px;margin-top:12px}
+</style>
+</head>
+<body>
+<main>
+  <div id="trpl-camping"></div>
+  <script src="camping.js" defer></script>
+
+  <section class="dev" aria-label="Staff notes">
+    <h2>Staff notes</h2>
+    <p>This page previews the public land camping guide. To place it on a trlibrary.com page, paste this into a code block:</p>
+<pre>&lt;div id="trpl-camping"&gt;&lt;/div&gt;
+&lt;script src="https://camping.labs.trlibrary.com/camping.js" defer&gt;&lt;/script&gt;</pre>
+    <p>Add <code>data-heading="off"</code> to the script tag when the page already has its own heading.</p>
+
+    <h3>Just the "Am I on public land?" button</h3>
+<pre>&lt;div id="trpl-camping-check"&gt;&lt;/div&gt;
+&lt;script src="https://camping.labs.trlibrary.com/camping.js" data-view="check" data-target="#trpl-camping-check" defer&gt;&lt;/script&gt;</pre>
+
+    <h3>Compact conditions (sidebar or homepage)</h3>
+<pre>&lt;div id="trpl-camping-mini"&gt;&lt;/div&gt;
+&lt;script src="https://camping.labs.trlibrary.com/camping.js" data-view="compact" data-target="#trpl-camping-mini" data-more="https://www.trlibrary.com/..." defer&gt;&lt;/script&gt;</pre>
+    <div class="compact"><div id="trpl-camping-mini"></div></div>
+    <script src="camping.js" data-view="compact" data-target="#trpl-camping-mini" defer></script>
+
+    <h3>Full-screen map for phones</h3>
+    <p><a href="map/">camping.labs.trlibrary.com/map/</a> opens the check button and map full screen. It can be added to a phone's home screen, and "Save this area for offline" keeps the map working with no signal.</p>
+  </section>
+</main>
+</body>
+</html>

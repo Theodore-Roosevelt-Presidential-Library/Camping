@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1B4532">
+<title>Public Land Map | Theodore Roosevelt Presidential Library</title>
+<meta name="description" content="Check whether you are on public or private land around Medora, North Dakota, and what the camping rules are there.">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<style>
+  html,body{margin:0;background:#fff;color:#25282A}
+  header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 14px;background:#25282A;color:#fff;font-family:"Frutiger","Helvetica Neue",Arial,sans-serif;font-size:14px}
+  header a{color:#fff}
+  header b{font-family:"Dharma Gothic E","Oswald","Arial Narrow",sans-serif;font-size:22px;letter-spacing:.03em;text-transform:uppercase;font-weight:700}
+  main{padding:12px 12px 40px;max-width:1100px;margin:0 auto}
+</style>
+</head>
+<body>
+<header><b>Public land map</b><a href="https://www.trlibrary.com/">Theodore Roosevelt Presidential Library</a></header>
+<main>
+  <div id="trpl-camping"></div>
+  <script src="../camping.js" data-view="app" defer></script>
+</main>
+<script>
+  if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(function () {});
+</script>
+</body>
+</html>
