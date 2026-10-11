@@ -1,38 +1,38 @@
 {
- "built": "2026-10-11T06:59:21Z",
+ "built": "2026-10-11T12:55:24Z",
  "fire": {
   "danger": [
    {
     "county": "Billings",
-    "today": 3,
+    "today": 1,
     "days": [
      1,
-     1,
      2,
      2,
      2,
-     2
+     2,
+     3
     ]
    },
    {
     "county": "Golden Valley",
-    "today": 3,
+    "today": 1,
     "days": [
      1,
-     1,
      2,
      2,
      2,
-     2
+     2,
+     3
     ]
    },
    {
     "county": "McKenzie",
-    "today": 2,
+    "today": 1,
     "days": [
      1,
      1,
-     1,
+     2,
      2,
      2,
      2
@@ -40,23 +40,23 @@
    },
    {
     "county": "Slope",
-    "today": 3,
+    "today": 1,
     "days": [
      1,
-     1,
-     1,
      2,
      2,
-     2
+     2,
+     2,
+     3
     ]
    },
    {
     "county": "Stark",
-    "today": 2,
+    "today": 1,
     "days": [
      1,
      1,
-     1,
+     2,
      2,
      2,
      2
@@ -64,26 +64,26 @@
    },
    {
     "county": "Dunn",
-    "today": 2,
+    "today": 1,
     "days": [
      1,
      1,
-     1,
-     1,
+     2,
+     2,
      2,
      2
     ]
    },
    {
     "county": "Bowman",
-    "today": 3,
+    "today": 1,
     "days": [
      1,
      1,
-     1,
      2,
      2,
-     2
+     2,
+     3
     ]
    }
   ],
@@ -95,7 +95,7 @@
     "campfires_at": "Low",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 2,
+    "index": 1,
     "expires": "2027-01-01T06:00:00Z",
     "note": "This declaration includes all of McKenzie County."
    },
@@ -106,7 +106,7 @@
     "campfires_at": "High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 2,
+    "index": 1,
     "expires": "2027-01-01T06:00:00Z",
     "note": "Includes: Dodge, Halliday, Dunn Center, & Killdeer\r\nKilldeer also has additional ordinance"
    },
@@ -117,7 +117,7 @@
     "campfires_at": "Very High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 3,
+    "index": 1,
     "expires": null,
     "note": "Includes all cities in Golden Valley County (Beach, Golva and Sentinel Butte)"
    },
@@ -128,7 +128,7 @@
     "campfires_at": "Low",
     "campfires_flag": false,
     "camping_at": null,
-    "index": 3,
+    "index": 1,
     "expires": "2027-01-01T06:00:00Z",
     "note": "Includes the cities of Medora, Fryburg, and Fairfield."
    },
@@ -139,7 +139,7 @@
     "campfires_at": "High",
     "campfires_flag": true,
     "camping_at": "Extreme",
-    "index": 2,
+    "index": 1,
     "expires": "2027-01-01T06:00:00Z",
     "note": "Burn restriction includes all incorporated cities within Stark County. City of Dickinson Residents - please refer to the information at www.dickinsonfire.com for specific ordinances enacted within the City of Dickinson limits."
    },
@@ -150,7 +150,7 @@
     "campfires_at": "Low",
     "campfires_flag": true,
     "camping_at": "Low",
-    "index": 3,
+    "index": 1,
     "expires": "2027-01-01T06:00:00Z",
     "note": "Cities in Bowman County are not included in the County Burn Restriction"
    },
@@ -161,7 +161,7 @@
     "campfires_at": "Low",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 3,
+    "index": 1,
     "expires": "2027-01-01T06:00:00Z",
     "note": "Includes all cities in Slope County."
    },
@@ -172,7 +172,7 @@
     "campfires_at": "Low",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 3,
+    "index": 1,
     "expires": "2027-01-01T06:00:00Z",
     "note": ""
    },
@@ -183,7 +183,7 @@
     "campfires_at": "Low",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 2,
+    "index": 1,
     "expires": "2027-01-01T06:00:00Z",
     "note": ""
    },
@@ -194,7 +194,7 @@
     "campfires_at": "High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 3,
+    "index": 1,
     "expires": "2027-01-01T06:00:00Z",
     "note": ""
    },
@@ -205,7 +205,7 @@
     "campfires_at": "High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 2,
+    "index": 1,
     "expires": "2027-01-01T06:00:00Z",
     "note": ""
    },
@@ -216,7 +216,7 @@
     "campfires_at": "High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 3,
+    "index": 1,
     "expires": "2027-01-01T06:00:00Z",
     "note": ""
    },
@@ -227,7 +227,7 @@
     "campfires_at": "High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 2,
+    "index": 1,
     "expires": "2027-01-01T06:00:00Z",
     "note": ""
    },
@@ -238,12 +238,12 @@
     "campfires_at": "High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 2,
+    "index": 1,
     "expires": "2027-01-01T06:00:00Z",
     "note": ""
    }
   ],
-  "published": "2026-10-10T04:15:00Z"
+  "published": "2026-10-11T04:15:00Z"
  },
  "orders": [
   {
@@ -320,8 +320,8 @@
     0.0,
     0.0,
     0.0,
-    0.016,
-    0.194,
+    0.091,
+    0.224,
     0.0,
     0.0
    ],
@@ -338,13 +338,13 @@
     0,
     0,
     9,
-    59,
-    66,
-    12,
-    12
+    55,
+    62,
+    8,
+    9
    ],
    "past3": 0,
-   "next3": 0.19
+   "next3": 0.22
   },
   {
    "place": "North Unit / Watford City",
@@ -361,8 +361,8 @@
     0.0,
     0.0,
     0.0,
-    0.102,
-    0.255,
+    0.063,
+    0.13,
     0.0,
     0.0
    ],
@@ -371,7 +371,7 @@
     0.0,
     0.0,
     0.0,
-    0.014,
+    0.0,
     0.0,
     0.0
    ],
@@ -379,13 +379,13 @@
     1,
     1,
     9,
-    73,
-    73,
-    29,
-    10
+    70,
+    78,
+    10,
+    6
    ],
    "past3": 0,
-   "next3": 0.26
+   "next3": 0.13
   },
   {
    "place": "Southern grassland (Amidon)",
@@ -402,8 +402,8 @@
     0.0,
     0.0,
     0.0,
-    0.016,
-    0.201,
+    0.157,
+    0.114,
     0.0,
     0.0
    ],
@@ -412,7 +412,7 @@
     0.0,
     0.0,
     0.0,
-    0.055,
+    0.0,
     0.0,
     0.0
    ],
@@ -420,13 +420,13 @@
     0,
     0,
     9,
-    43,
-    60,
-    12,
-    16
+    47,
+    61,
+    6,
+    11
    ],
    "past3": 0,
-   "next3": 0.2
+   "next3": 0.11
   }
  ],
  "flags": {
