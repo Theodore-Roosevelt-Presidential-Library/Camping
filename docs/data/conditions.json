@@ -1,14 +1,14 @@
 {
- "built": "2026-10-13T07:06:00Z",
+ "built": "2026-10-13T13:00:08Z",
  "fire": {
   "danger": [
    {
     "county": "Billings",
-    "today": 1,
+    "today": 2,
     "days": [
      2,
-     2,
-     2,
+     3,
+     3,
      3,
      3,
      3
@@ -16,11 +16,11 @@
    },
    {
     "county": "Golden Valley",
-    "today": 1,
+    "today": 2,
     "days": [
      2,
-     2,
-     2,
+     3,
+     3,
      3,
      3,
      3
@@ -40,25 +40,25 @@
    },
    {
     "county": "Slope",
-    "today": 1,
+    "today": 3,
     "days": [
-     2,
-     2,
-     2,
      3,
      4,
+     3,
+     3,
+     3,
      3
     ]
    },
    {
     "county": "Stark",
-    "today": 1,
+    "today": 2,
     "days": [
-     1,
-     1,
      2,
      2,
      3,
+     3,
+     2,
      2
     ]
    },
@@ -66,8 +66,8 @@
     "county": "Dunn",
     "today": 1,
     "days": [
-     1,
-     1,
+     2,
+     2,
      2,
      2,
      2,
@@ -76,11 +76,11 @@
    },
    {
     "county": "Bowman",
-    "today": 1,
+    "today": 2,
     "days": [
      2,
-     2,
-     2,
+     3,
+     3,
      3,
      3,
      3
@@ -117,7 +117,7 @@
     "campfires_at": "Very High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 1,
+    "index": 2,
     "expires": null,
     "note": "Includes all cities in Golden Valley County (Beach, Golva and Sentinel Butte)"
    },
@@ -128,7 +128,7 @@
     "campfires_at": "Low",
     "campfires_flag": false,
     "camping_at": null,
-    "index": 1,
+    "index": 2,
     "expires": "2027-01-01T06:00:00Z",
     "note": "Includes the cities of Medora, Fryburg, and Fairfield."
    },
@@ -139,7 +139,7 @@
     "campfires_at": "High",
     "campfires_flag": true,
     "camping_at": "Extreme",
-    "index": 1,
+    "index": 2,
     "expires": "2027-01-01T06:00:00Z",
     "note": "Burn restriction includes all incorporated cities within Stark County. City of Dickinson Residents - please refer to the information at www.dickinsonfire.com for specific ordinances enacted within the City of Dickinson limits."
    },
@@ -150,7 +150,7 @@
     "campfires_at": "Low",
     "campfires_flag": true,
     "camping_at": "Low",
-    "index": 1,
+    "index": 2,
     "expires": "2027-01-01T06:00:00Z",
     "note": "Cities in Bowman County are not included in the County Burn Restriction"
    },
@@ -161,7 +161,7 @@
     "campfires_at": "Low",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 1,
+    "index": 3,
     "expires": "2027-01-01T06:00:00Z",
     "note": "Includes all cities in Slope County."
    },
@@ -172,7 +172,7 @@
     "campfires_at": "Low",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 1,
+    "index": 3,
     "expires": "2027-01-01T06:00:00Z",
     "note": ""
    },
@@ -194,7 +194,7 @@
     "campfires_at": "High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 1,
+    "index": 2,
     "expires": "2027-01-01T06:00:00Z",
     "note": ""
    },
@@ -205,7 +205,7 @@
     "campfires_at": "High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 1,
+    "index": 2,
     "expires": "2027-01-01T06:00:00Z",
     "note": ""
    },
@@ -216,7 +216,7 @@
     "campfires_at": "High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 1,
+    "index": 2,
     "expires": "2027-01-01T06:00:00Z",
     "note": ""
    },
@@ -243,7 +243,7 @@
     "note": ""
    }
   ],
-  "published": "2026-10-12T04:15:00Z"
+  "published": "2026-10-13T04:15:00Z"
  },
  "orders": [
   {
@@ -321,7 +321,7 @@
     0.173,
     0.0,
     0.0,
-    0.067,
+    0.0,
     0.0,
     0.0
    ],
@@ -339,12 +339,12 @@
     65,
     74,
     0,
-    0,
-    1,
+    5,
+    5,
     1
    ],
    "past3": 0.17,
-   "next3": 0.07
+   "next3": 0
   },
   {
    "place": "North Unit / Watford City",
@@ -380,9 +380,9 @@
     84,
     93,
     0,
-    0,
     1,
-    1
+    1,
+    0
    ],
    "past3": 0.62,
    "next3": 0
@@ -403,8 +403,8 @@
     0.071,
     0.0,
     0.0,
-    0.031,
-    0.008,
+    0.01,
+    0.0,
     0.0
    ],
    "snow": [
@@ -421,12 +421,12 @@
     70,
     56,
     1,
-    1,
-    1,
+    6,
+    6,
     1
    ],
    "past3": 0.07,
-   "next3": 0.04
+   "next3": 0.01
   }
  ],
  "flags": {
