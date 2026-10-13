@@ -1,5 +1,5 @@
 {
- "built": "2026-10-13T13:00:08Z",
+ "built": "2026-10-13T18:53:19Z",
  "fire": {
   "danger": [
    {
@@ -303,7 +303,15 @@
    "order": "01-18-07-24-01"
   }
  ],
- "weather": [],
+ "weather": [
+  {
+   "event": "Freeze Warning",
+   "severity": "Severe",
+   "headline": "Freeze Warning issued October 13 at 12:09PM CDT until October 14 at 9:00AM CDT by NWS Bismarck ND",
+   "ends": "2026-10-14T09:00:00-05:00",
+   "area": "Divide; Burke; Renville; Bottineau; Rolette; Williams; Mountrail; McHenry; Pierce; McKenzie; Dunn; Mercer; Oliver; Sheridan; Wells; Foster; Golden Valley; Billings; Stark; Burleigh; Kidder; Stutsman; Slope; Hettinger; Grant; Bowman; Adams; Emmons; Logan; La Moure; McIntosh; Dickey; Northwest Ward; Central and Southern Ward/Minot Area; Western McLean; Eastern McLean; Western Morton; Eastern Morton; Western Sioux; Eastern Sioux"
+  }
+ ],
  "rain": [
   {
    "place": "Medora",
@@ -339,9 +347,9 @@
     65,
     74,
     0,
-    5,
-    5,
-    1
+    2,
+    2,
+    0
    ],
    "past3": 0.17,
    "next3": 0
@@ -359,8 +367,8 @@
    ],
    "precip": [
     0.0,
-    0.087,
-    0.531,
+    0.315,
+    0.303,
     0.0,
     0.0,
     0.0,
@@ -403,7 +411,7 @@
     0.071,
     0.0,
     0.0,
-    0.01,
+    0.0,
     0.0,
     0.0
    ],
@@ -421,12 +429,12 @@
     70,
     56,
     1,
-    6,
+    7,
     6,
     1
    ],
    "past3": 0.07,
-   "next3": 0.01
+   "next3": 0
   }
  ],
  "flags": {
