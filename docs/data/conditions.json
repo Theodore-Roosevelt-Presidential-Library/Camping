@@ -1,5 +1,5 @@
 {
- "built": "2026-10-15T12:56:12Z",
+ "built": "2026-10-15T18:51:06Z",
  "fire": {
   "danger": [
    {
@@ -245,9 +245,6 @@
   ],
   "published": "2026-10-15T04:15:00Z"
  },
- "stale": [
-  "orders"
- ],
  "orders": [
   {
    "title": "Little Missouri National Grassland - Fire Restriction Order 01-18-00-26-08",
@@ -310,7 +307,7 @@
   {
    "event": "Wind Advisory",
    "severity": "Moderate",
-   "headline": "Wind Advisory issued October 15 at 2:35AM CDT until October 16 at 12:00AM CDT by NWS Bismarck ND",
+   "headline": "Wind Advisory issued October 15 at 12:42PM CDT until October 16 at 12:00AM CDT by NWS Bismarck ND",
    "ends": "2026-10-16T00:00:00-05:00",
    "area": "Divide; Burke; Renville; Bottineau; Rolette; Williams; Mountrail; McHenry; Pierce; McKenzie; Dunn; Mercer; Oliver; Sheridan; Golden Valley; Billings; Stark; Burleigh; Slope; Hettinger; Grant; Bowman; Adams; Northwest Ward; Central and Southern Ward/Minot Area; Western McLean; Eastern McLean; Western Morton; Eastern Morton; Western Sioux; Eastern Sioux"
   }
@@ -349,7 +346,7 @@
     74,
     0,
     0,
-    1,
+    2,
     0,
     0,
     0
@@ -369,7 +366,7 @@
     "2026-10-18"
    ],
    "precip": [
-    0.531,
+    0.303,
     0.0,
     0.0,
     0.0,
@@ -395,7 +392,7 @@
     0,
     0
    ],
-   "past3": 0.53,
+   "past3": 0.3,
    "next3": 0
   },
   {
@@ -431,7 +428,7 @@
     56,
     1,
     1,
-    1,
+    2,
     0,
     0,
     0
