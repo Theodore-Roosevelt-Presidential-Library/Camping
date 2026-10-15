@@ -1,5 +1,5 @@
 {
- "built": "2026-10-15T01:06:47Z",
+ "built": "2026-10-15T06:58:32Z",
  "fire": {
   "danger": [
    {
@@ -307,7 +307,7 @@
   {
    "event": "Wind Advisory",
    "severity": "Moderate",
-   "headline": "Wind Advisory issued October 14 at 12:22PM CDT until October 16 at 12:00AM CDT by NWS Bismarck ND",
+   "headline": "Wind Advisory issued October 14 at 9:15PM CDT until October 16 at 12:00AM CDT by NWS Bismarck ND",
    "ends": "2026-10-16T00:00:00-05:00",
    "area": "Divide; Burke; Renville; Bottineau; Rolette; Williams; Mountrail; McHenry; Pierce; McKenzie; Dunn; Mercer; Oliver; Sheridan; Wells; Foster; Golden Valley; Billings; Stark; Burleigh; Kidder; Stutsman; Slope; Hettinger; Grant; Bowman; Adams; Emmons; Logan; La Moure; McIntosh; Dickey; Northwest Ward; Central and Southern Ward/Minot Area; Western McLean; Eastern McLean; Western Morton; Eastern Morton; Western Sioux; Eastern Sioux"
   }
@@ -316,16 +316,16 @@
   {
    "place": "Medora",
    "dates": [
-    "2026-10-11",
     "2026-10-12",
     "2026-10-13",
     "2026-10-14",
     "2026-10-15",
     "2026-10-16",
-    "2026-10-17"
+    "2026-10-17",
+    "2026-10-18"
    ],
    "precip": [
-    0.173,
+    0.0,
     0.0,
     0.0,
     0.0,
@@ -343,31 +343,31 @@
     0.0
    ],
    "chance": [
-    65,
     74,
     0,
     0,
     1,
     0,
+    0,
     0
    ],
-   "past3": 0.17,
+   "past3": 0,
    "next3": 0
   },
   {
    "place": "North Unit / Watford City",
    "dates": [
-    "2026-10-11",
     "2026-10-12",
     "2026-10-13",
     "2026-10-14",
     "2026-10-15",
     "2026-10-16",
-    "2026-10-17"
+    "2026-10-17",
+    "2026-10-18"
    ],
    "precip": [
-    0.087,
-    0.531,
+    0.303,
+    0.0,
     0.0,
     0.0,
     0.0,
@@ -384,30 +384,30 @@
     0.0
    ],
    "chance": [
-    84,
     93,
     0,
     0,
-    2,
+    3,
+    0,
     0,
     0
    ],
-   "past3": 0.62,
+   "past3": 0.3,
    "next3": 0
   },
   {
    "place": "Southern grassland (Amidon)",
    "dates": [
-    "2026-10-11",
     "2026-10-12",
     "2026-10-13",
     "2026-10-14",
     "2026-10-15",
     "2026-10-16",
-    "2026-10-17"
+    "2026-10-17",
+    "2026-10-18"
    ],
    "precip": [
-    0.071,
+    0.0,
     0.0,
     0.0,
     0.0,
@@ -425,15 +425,15 @@
     0.0
    ],
    "chance": [
-    70,
     56,
     1,
-    0,
     1,
+    1,
+    0,
     0,
     0
    ],
-   "past3": 0.07,
+   "past3": 0,
    "next3": 0
   }
  ],
