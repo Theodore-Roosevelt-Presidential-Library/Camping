@@ -1,34 +1,34 @@
 {
- "built": "2026-10-15T06:58:32Z",
+ "built": "2026-10-15T12:56:12Z",
  "fire": {
   "danger": [
    {
     "county": "Billings",
-    "today": 2,
+    "today": 1,
     "days": [
      3,
      3,
      3,
      3,
-     3,
+     2,
      2
     ]
    },
    {
     "county": "Golden Valley",
-    "today": 2,
+    "today": 1,
     "days": [
      3,
      3,
      3,
      3,
-     3,
+     2,
      2
     ]
    },
    {
     "county": "McKenzie",
-    "today": 2,
+    "today": 1,
     "days": [
      2,
      2,
@@ -40,23 +40,23 @@
    },
    {
     "county": "Slope",
-    "today": 3,
+    "today": 2,
     "days": [
-     3,
      4,
      4,
      3,
+     4,
      3,
      3
     ]
    },
    {
     "county": "Stark",
-    "today": 2,
+    "today": 1,
     "days": [
      2,
      3,
-     3,
+     2,
      2,
      2,
      2
@@ -64,11 +64,11 @@
    },
    {
     "county": "Dunn",
-    "today": 2,
+    "today": 1,
     "days": [
      2,
-     2,
      3,
+     2,
      2,
      2,
      2
@@ -78,11 +78,11 @@
     "county": "Bowman",
     "today": 2,
     "days": [
+     3,
+     3,
      2,
      3,
-     4,
-     3,
-     3,
+     2,
      2
     ]
    }
@@ -95,7 +95,7 @@
     "campfires_at": "Low",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 2,
+    "index": 1,
     "expires": "2027-01-01T06:00:00Z",
     "note": "This declaration includes all of McKenzie County."
    },
@@ -106,7 +106,7 @@
     "campfires_at": "High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 2,
+    "index": 1,
     "expires": "2027-01-01T06:00:00Z",
     "note": "Includes: Dodge, Halliday, Dunn Center, & Killdeer\r\nKilldeer also has additional ordinance"
    },
@@ -117,7 +117,7 @@
     "campfires_at": "Very High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 2,
+    "index": 1,
     "expires": null,
     "note": "Includes all cities in Golden Valley County (Beach, Golva and Sentinel Butte)"
    },
@@ -128,7 +128,7 @@
     "campfires_at": "Low",
     "campfires_flag": false,
     "camping_at": null,
-    "index": 2,
+    "index": 1,
     "expires": "2027-01-01T06:00:00Z",
     "note": "Includes the cities of Medora, Fryburg, and Fairfield."
    },
@@ -139,7 +139,7 @@
     "campfires_at": "High",
     "campfires_flag": true,
     "camping_at": "Extreme",
-    "index": 2,
+    "index": 1,
     "expires": "2027-01-01T06:00:00Z",
     "note": "Burn restriction includes all incorporated cities within Stark County. City of Dickinson Residents - please refer to the information at www.dickinsonfire.com for specific ordinances enacted within the City of Dickinson limits."
    },
@@ -161,7 +161,7 @@
     "campfires_at": "Low",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 3,
+    "index": 2,
     "expires": "2027-01-01T06:00:00Z",
     "note": "Includes all cities in Slope County."
    },
@@ -172,7 +172,7 @@
     "campfires_at": "Low",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 3,
+    "index": 2,
     "expires": "2027-01-01T06:00:00Z",
     "note": ""
    },
@@ -183,7 +183,7 @@
     "campfires_at": "Low",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 2,
+    "index": 1,
     "expires": "2027-01-01T06:00:00Z",
     "note": ""
    },
@@ -205,7 +205,7 @@
     "campfires_at": "High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 2,
+    "index": 1,
     "expires": "2027-01-01T06:00:00Z",
     "note": ""
    },
@@ -216,7 +216,7 @@
     "campfires_at": "High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 2,
+    "index": 1,
     "expires": "2027-01-01T06:00:00Z",
     "note": ""
    },
@@ -227,7 +227,7 @@
     "campfires_at": "High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 2,
+    "index": 1,
     "expires": "2027-01-01T06:00:00Z",
     "note": ""
    },
@@ -238,13 +238,16 @@
     "campfires_at": "High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 2,
+    "index": 1,
     "expires": "2027-01-01T06:00:00Z",
     "note": ""
    }
   ],
-  "published": "2026-10-14T04:15:00Z"
+  "published": "2026-10-15T04:15:00Z"
  },
+ "stale": [
+  "orders"
+ ],
  "orders": [
   {
    "title": "Little Missouri National Grassland - Fire Restriction Order 01-18-00-26-08",
@@ -307,9 +310,9 @@
   {
    "event": "Wind Advisory",
    "severity": "Moderate",
-   "headline": "Wind Advisory issued October 14 at 9:15PM CDT until October 16 at 12:00AM CDT by NWS Bismarck ND",
+   "headline": "Wind Advisory issued October 15 at 2:35AM CDT until October 16 at 12:00AM CDT by NWS Bismarck ND",
    "ends": "2026-10-16T00:00:00-05:00",
-   "area": "Divide; Burke; Renville; Bottineau; Rolette; Williams; Mountrail; McHenry; Pierce; McKenzie; Dunn; Mercer; Oliver; Sheridan; Wells; Foster; Golden Valley; Billings; Stark; Burleigh; Kidder; Stutsman; Slope; Hettinger; Grant; Bowman; Adams; Emmons; Logan; La Moure; McIntosh; Dickey; Northwest Ward; Central and Southern Ward/Minot Area; Western McLean; Eastern McLean; Western Morton; Eastern Morton; Western Sioux; Eastern Sioux"
+   "area": "Divide; Burke; Renville; Bottineau; Rolette; Williams; Mountrail; McHenry; Pierce; McKenzie; Dunn; Mercer; Oliver; Sheridan; Golden Valley; Billings; Stark; Burleigh; Slope; Hettinger; Grant; Bowman; Adams; Northwest Ward; Central and Southern Ward/Minot Area; Western McLean; Eastern McLean; Western Morton; Eastern Morton; Western Sioux; Eastern Sioux"
   }
  ],
  "rain": [
@@ -366,7 +369,7 @@
     "2026-10-18"
    ],
    "precip": [
-    0.303,
+    0.531,
     0.0,
     0.0,
     0.0,
@@ -387,12 +390,12 @@
     93,
     0,
     0,
-    3,
+    6,
     0,
     0,
     0
    ],
-   "past3": 0.3,
+   "past3": 0.53,
    "next3": 0
   },
   {
