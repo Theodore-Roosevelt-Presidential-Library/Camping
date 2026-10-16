@@ -1,5 +1,5 @@
 {
- "built": "2026-10-16T12:54:45Z",
+ "built": "2026-10-16T18:48:39Z",
  "fire": {
   "danger": [
    {
@@ -255,20 +255,20 @@
    "order": "01-18-00-26-08"
   },
   {
-   "title": "Firewood Use and Possession Restrictions",
-   "url": "https://www.fs.usda.gov/r01/dpg/alerts/firewood-use-and-possession-restrictions",
-   "summary": "",
-   "start": null,
-   "end": null,
-   "order": null
-  },
-  {
    "title": "North Dakota Burn Restrictions & Fire Danger Maps",
    "url": "https://www.fs.usda.gov/r01/dpg/alerts/north-dakota-burn-restrictions-fire-danger-maps",
    "summary": "Check for restrictions before burning and participating in outdoor activities.It is critical that you verify current restrictions before burning or participating in outdoor activities. Conditions may develop throughout the day, such as the issuance of a Red Flag Warning, resulting in a change in\u2026",
    "start": "March 1, 2026",
    "end": null,
    "order": null
+  },
+  {
+   "title": "Firewood Use and Possession Restrictions",
+   "url": "https://www.fs.usda.gov/r01/dpg/alerts/firewood-use-and-possession-restrictions-0",
+   "summary": "This closure order restricts the use of firewood across all Dakota Prairie Grasslands to prevent the spread of invasive pests. It bans firewood brought in from out-of-state, quarantined counties, or uncertified vendors, while allowing approved sources like onsite dead-and-downed wood, certified\u2026",
+   "start": "October 15, 2026",
+   "end": null,
+   "order": "01-18-00-26-09"
   },
   {
    "title": "AREA CLOSURE - Vehicles Off Road - Little Missouri National Grassland",
@@ -303,15 +303,7 @@
    "order": "01-18-07-24-01"
   }
  ],
- "weather": [
-  {
-   "event": "Freeze Warning",
-   "severity": "Severe",
-   "headline": "Freeze Warning issued October 16 at 7:15AM CDT until October 16 at 10:00AM CDT by NWS Bismarck ND",
-   "ends": "2026-10-16T10:00:00-05:00",
-   "area": "Divide; Burke; Renville; Bottineau; Rolette; Williams; Mountrail; McHenry; Pierce; McKenzie; Dunn; Mercer; Oliver; Sheridan; Golden Valley; Billings; Stark; Burleigh; Slope; Hettinger; Grant; Bowman; Adams; Northwest Ward; Central and Southern Ward/Minot Area; Western McLean; Eastern McLean; Western Morton; Eastern Morton; Western Sioux; Eastern Sioux"
-  }
- ],
+ "weather": [],
  "rain": [
   {
    "place": "Medora",
