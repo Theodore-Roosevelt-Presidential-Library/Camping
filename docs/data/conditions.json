@@ -1,5 +1,5 @@
 {
- "built": "2026-10-16T01:05:51Z",
+ "built": "2026-10-16T06:58:48Z",
  "fire": {
   "danger": [
    {
@@ -305,16 +305,9 @@
  ],
  "weather": [
   {
-   "event": "Wind Advisory",
-   "severity": "Moderate",
-   "headline": "Wind Advisory issued October 15 at 7:19PM CDT until October 16 at 12:00AM CDT by NWS Bismarck ND",
-   "ends": "2026-10-16T00:00:00-05:00",
-   "area": "Divide; Burke; Renville; Bottineau; Rolette; Williams; Mountrail; McHenry; Pierce; McKenzie; Dunn; Mercer; Oliver; Sheridan; Golden Valley; Billings; Stark; Burleigh; Slope; Hettinger; Grant; Bowman; Adams; Northwest Ward; Central and Southern Ward/Minot Area; Western McLean; Eastern McLean; Western Morton; Eastern Morton; Western Sioux; Eastern Sioux"
-  },
-  {
    "event": "Freeze Warning",
    "severity": "Severe",
-   "headline": "Freeze Warning issued October 15 at 7:19PM CDT until October 16 at 8:00AM CDT by NWS Bismarck ND",
+   "headline": "Freeze Warning issued October 16 at 1:14AM CDT until October 16 at 8:00AM CDT by NWS Bismarck ND",
    "ends": "2026-10-16T08:00:00-05:00",
    "area": "Divide; Burke; Renville; Bottineau; Rolette; Williams; Mountrail; McHenry; Pierce; McKenzie; Dunn; Mercer; Oliver; Sheridan; Golden Valley; Billings; Stark; Burleigh; Slope; Hettinger; Grant; Bowman; Adams; Northwest Ward; Central and Southern Ward/Minot Area; Western McLean; Eastern McLean; Western Morton; Eastern Morton; Western Sioux; Eastern Sioux"
   }
@@ -323,13 +316,13 @@
   {
    "place": "Medora",
    "dates": [
-    "2026-10-12",
     "2026-10-13",
     "2026-10-14",
     "2026-10-15",
     "2026-10-16",
     "2026-10-17",
-    "2026-10-18"
+    "2026-10-18",
+    "2026-10-19"
    ],
    "precip": [
     0.0,
@@ -350,10 +343,10 @@
     0.0
    ],
    "chance": [
-    74,
     0,
     0,
     1,
+    0,
     0,
     0,
     0
@@ -364,16 +357,16 @@
   {
    "place": "North Unit / Watford City",
    "dates": [
-    "2026-10-12",
     "2026-10-13",
     "2026-10-14",
     "2026-10-15",
     "2026-10-16",
     "2026-10-17",
-    "2026-10-18"
+    "2026-10-18",
+    "2026-10-19"
    ],
    "precip": [
-    0.531,
+    0.0,
     0.0,
     0.0,
     0.0,
@@ -391,27 +384,27 @@
     0.0
    ],
    "chance": [
-    93,
     0,
     0,
     2,
     0,
     0,
+    0,
     0
    ],
-   "past3": 0.53,
+   "past3": 0,
    "next3": 0
   },
   {
    "place": "Southern grassland (Amidon)",
    "dates": [
-    "2026-10-12",
     "2026-10-13",
     "2026-10-14",
     "2026-10-15",
     "2026-10-16",
     "2026-10-17",
-    "2026-10-18"
+    "2026-10-18",
+    "2026-10-19"
    ],
    "precip": [
     0.0,
@@ -432,10 +425,10 @@
     0.0
    ],
    "chance": [
-    56,
     1,
     1,
     1,
+    0,
     0,
     0,
     0
