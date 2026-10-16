@@ -1,5 +1,5 @@
 {
- "built": "2026-10-15T18:51:06Z",
+ "built": "2026-10-16T01:05:51Z",
  "fire": {
   "danger": [
    {
@@ -307,8 +307,15 @@
   {
    "event": "Wind Advisory",
    "severity": "Moderate",
-   "headline": "Wind Advisory issued October 15 at 12:42PM CDT until October 16 at 12:00AM CDT by NWS Bismarck ND",
+   "headline": "Wind Advisory issued October 15 at 7:19PM CDT until October 16 at 12:00AM CDT by NWS Bismarck ND",
    "ends": "2026-10-16T00:00:00-05:00",
+   "area": "Divide; Burke; Renville; Bottineau; Rolette; Williams; Mountrail; McHenry; Pierce; McKenzie; Dunn; Mercer; Oliver; Sheridan; Golden Valley; Billings; Stark; Burleigh; Slope; Hettinger; Grant; Bowman; Adams; Northwest Ward; Central and Southern Ward/Minot Area; Western McLean; Eastern McLean; Western Morton; Eastern Morton; Western Sioux; Eastern Sioux"
+  },
+  {
+   "event": "Freeze Warning",
+   "severity": "Severe",
+   "headline": "Freeze Warning issued October 15 at 7:19PM CDT until October 16 at 8:00AM CDT by NWS Bismarck ND",
+   "ends": "2026-10-16T08:00:00-05:00",
    "area": "Divide; Burke; Renville; Bottineau; Rolette; Williams; Mountrail; McHenry; Pierce; McKenzie; Dunn; Mercer; Oliver; Sheridan; Golden Valley; Billings; Stark; Burleigh; Slope; Hettinger; Grant; Bowman; Adams; Northwest Ward; Central and Southern Ward/Minot Area; Western McLean; Eastern McLean; Western Morton; Eastern Morton; Western Sioux; Eastern Sioux"
   }
  ],
@@ -346,7 +353,7 @@
     74,
     0,
     0,
-    2,
+    1,
     0,
     0,
     0
@@ -366,7 +373,7 @@
     "2026-10-18"
    ],
    "precip": [
-    0.303,
+    0.531,
     0.0,
     0.0,
     0.0,
@@ -387,12 +394,12 @@
     93,
     0,
     0,
-    6,
+    2,
     0,
     0,
     0
    ],
-   "past3": 0.3,
+   "past3": 0.53,
    "next3": 0
   },
   {
@@ -428,7 +435,7 @@
     56,
     1,
     1,
-    2,
+    1,
     0,
     0,
     0
