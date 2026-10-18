@@ -1,27 +1,27 @@
 {
- "built": "2026-10-18T06:54:39Z",
+ "built": "2026-10-18T12:48:24Z",
  "fire": {
   "danger": [
    {
     "county": "Billings",
-    "today": 4,
+    "today": 2,
     "days": [
-     2,
      3,
      2,
      2,
+     3,
      2,
      2
     ]
    },
    {
     "county": "Golden Valley",
-    "today": 4,
+    "today": 2,
     "days": [
-     2,
      3,
      2,
      2,
+     3,
      2,
      2
     ]
@@ -40,7 +40,7 @@
    },
    {
     "county": "Slope",
-    "today": 4,
+    "today": 3,
     "days": [
      3,
      3,
@@ -52,7 +52,7 @@
    },
    {
     "county": "Stark",
-    "today": 3,
+    "today": 2,
     "days": [
      2,
      2,
@@ -64,7 +64,7 @@
    },
    {
     "county": "Dunn",
-    "today": 3,
+    "today": 2,
     "days": [
      2,
      2,
@@ -76,9 +76,9 @@
    },
    {
     "county": "Bowman",
-    "today": 4,
+    "today": 2,
     "days": [
-     3,
+     2,
      2,
      2,
      2,
@@ -106,7 +106,7 @@
     "campfires_at": "High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 3,
+    "index": 2,
     "expires": "2027-01-01T06:00:00Z",
     "note": "Includes: Dodge, Halliday, Dunn Center, & Killdeer\r\nKilldeer also has additional ordinance"
    },
@@ -117,7 +117,7 @@
     "campfires_at": "Very High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 4,
+    "index": 2,
     "expires": null,
     "note": "Includes all cities in Golden Valley County (Beach, Golva and Sentinel Butte)"
    },
@@ -128,7 +128,7 @@
     "campfires_at": "Low",
     "campfires_flag": false,
     "camping_at": null,
-    "index": 4,
+    "index": 2,
     "expires": "2027-01-01T06:00:00Z",
     "note": "Includes the cities of Medora, Fryburg, and Fairfield."
    },
@@ -139,7 +139,7 @@
     "campfires_at": "High",
     "campfires_flag": true,
     "camping_at": "Extreme",
-    "index": 3,
+    "index": 2,
     "expires": "2027-01-01T06:00:00Z",
     "note": "Burn restriction includes all incorporated cities within Stark County. City of Dickinson Residents - please refer to the information at www.dickinsonfire.com for specific ordinances enacted within the City of Dickinson limits."
    },
@@ -150,7 +150,7 @@
     "campfires_at": "Low",
     "campfires_flag": true,
     "camping_at": "Low",
-    "index": 4,
+    "index": 2,
     "expires": "2027-01-01T06:00:00Z",
     "note": "Cities in Bowman County are not included in the County Burn Restriction"
    },
@@ -161,7 +161,7 @@
     "campfires_at": "Low",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 4,
+    "index": 3,
     "expires": "2027-01-01T06:00:00Z",
     "note": "Includes all cities in Slope County."
    },
@@ -172,7 +172,7 @@
     "campfires_at": "Low",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 4,
+    "index": 3,
     "expires": "2027-01-01T06:00:00Z",
     "note": ""
    },
@@ -183,7 +183,7 @@
     "campfires_at": "Low",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 3,
+    "index": 2,
     "expires": "2027-01-01T06:00:00Z",
     "note": ""
    },
@@ -194,7 +194,7 @@
     "campfires_at": "High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 4,
+    "index": 2,
     "expires": "2027-01-01T06:00:00Z",
     "note": ""
    },
@@ -205,7 +205,7 @@
     "campfires_at": "High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 3,
+    "index": 2,
     "expires": "2027-01-01T06:00:00Z",
     "note": ""
    },
@@ -216,7 +216,7 @@
     "campfires_at": "High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 4,
+    "index": 2,
     "expires": "2027-01-01T06:00:00Z",
     "note": ""
    },
@@ -227,7 +227,7 @@
     "campfires_at": "High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 3,
+    "index": 2,
     "expires": "2027-01-01T06:00:00Z",
     "note": ""
    },
@@ -243,7 +243,7 @@
     "note": ""
    }
   ],
-  "published": "2026-10-17T04:15:00Z"
+  "published": "2026-10-18T04:15:00Z"
  },
  "orders": [
   {
@@ -379,8 +379,8 @@
     2,
     0,
     0,
-    0,
-    0,
+    1,
+    1,
     0,
     0
    ],
@@ -421,7 +421,7 @@
     0,
     0,
     0,
-    0,
+    1,
     0,
     0
    ],
