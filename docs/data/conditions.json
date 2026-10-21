@@ -1,27 +1,27 @@
 {
- "built": "2026-10-21T07:00:22Z",
+ "built": "2026-10-21T12:56:07Z",
  "fire": {
   "danger": [
    {
     "county": "Billings",
-    "today": 2,
+    "today": 3,
     "days": [
      2,
-     2,
-     2,
      3,
+     3,
+     2,
      2,
      2
     ]
    },
    {
     "county": "Golden Valley",
-    "today": 2,
+    "today": 3,
     "days": [
      2,
-     2,
-     2,
      3,
+     3,
+     2,
      2,
      2
     ]
@@ -45,7 +45,7 @@
      3,
      3,
      3,
-     4,
+     3,
      3,
      3
     ]
@@ -79,9 +79,9 @@
     "today": 2,
     "days": [
      2,
-     2,
-     2,
      3,
+     3,
+     2,
      2,
      2
     ]
@@ -117,7 +117,7 @@
     "campfires_at": "Very High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 2,
+    "index": 3,
     "expires": null,
     "note": "Includes all cities in Golden Valley County (Beach, Golva and Sentinel Butte)"
    },
@@ -128,7 +128,7 @@
     "campfires_at": "Low",
     "campfires_flag": false,
     "camping_at": null,
-    "index": 2,
+    "index": 3,
     "expires": "2027-01-01T06:00:00Z",
     "note": "Includes the cities of Medora, Fryburg, and Fairfield."
    },
@@ -216,7 +216,7 @@
     "campfires_at": "High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 2,
+    "index": 3,
     "expires": "2027-01-01T06:00:00Z",
     "note": ""
    },
@@ -243,7 +243,7 @@
     "note": ""
    }
   ],
-  "published": "2026-10-20T04:15:00Z"
+  "published": "2026-10-21T04:15:00Z"
  },
  "orders": [
   {
@@ -339,9 +339,9 @@
     0,
     0,
     0,
-    0,
-    9,
-    15
+    2,
+    6,
+    13
    ],
    "past3": 0,
    "next3": 0
@@ -363,7 +363,7 @@
     0.0,
     0.0,
     0.0,
-    0.004,
+    0.0,
     0.0
    ],
    "snow": [
@@ -379,13 +379,13 @@
     0,
     0,
     0,
-    0,
-    0,
-    12,
-    17
+    2,
+    2,
+    9,
+    16
    ],
    "past3": 0,
-   "next3": 0.0
+   "next3": 0
   },
   {
    "place": "Southern grassland (Amidon)",
@@ -420,10 +420,10 @@
     0,
     0,
     0,
-    0,
-    0,
-    8,
-    11
+    1,
+    2,
+    5,
+    10
    ],
    "past3": 0,
    "next3": 0
