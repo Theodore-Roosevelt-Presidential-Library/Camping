@@ -1,5 +1,5 @@
 {
- "built": "2026-10-21T18:50:56Z",
+ "built": "2026-10-22T01:07:19Z",
  "fire": {
   "danger": [
    {
@@ -247,12 +247,12 @@
  },
  "orders": [
   {
-   "title": "Little Missouri National Grassland - Fire Restriction Order 01-18-00-26-08",
-   "url": "https://www.fs.usda.gov/r01/dpg/alerts/little-missouri-national-grassland-fire-restriction-order-01-18-00-26-08",
-   "summary": "This Fire Restriction Order for the Little Missouri National Grasslands covers the National Forest System lands in Slope, Golden Valley, Billings, and McKenzie counties and is effective from September 4 through December 31, 2026. For details, contact local ranger district offices.",
-   "start": "September 4, 2026",
+   "title": "Little Missouri National Grassland Fire Closure Order # 01-18-00-26-02",
+   "url": "https://www.fs.usda.gov/r01/dpg/alerts/little-missouri-national-grassland-fire-closure-order-01-18-00-26-02",
+   "summary": "This order restricts campfires, smoking outside safe areas, and driving wheeled vehicles on Prairie Two Track roads in the Little Missouri National Grassland whenever fire danger is High or above, or during Red Flag Warnings. Some exceptions apply, such as propane stoves, certain permitted\u2026",
+   "start": "June 26, 2026",
    "end": null,
-   "order": "01-18-00-26-08"
+   "order": "01-18-00-26-02"
   },
   {
    "title": "North Dakota Burn Restrictions & Fire Danger Maps",
@@ -285,14 +285,6 @@
    "start": "July 10, 2026",
    "end": null,
    "order": null
-  },
-  {
-   "title": "Little Missouri National Grassland Fire Closure Order # 01-18-00-26-02",
-   "url": "https://www.fs.usda.gov/r01/dpg/alerts/little-missouri-national-grassland-fire-closure-order-01-18-00-26-02",
-   "summary": "This order restricts campfires, smoking outside safe areas, and driving wheeled vehicles on Prairie Two Track roads in the Little Missouri National Grassland whenever fire danger is High or above, or during Red Flag Warnings. Some exceptions apply, such as propane stoves, certain permitted\u2026",
-   "start": "June 26, 2026",
-   "end": null,
-   "order": "01-18-00-26-02"
   },
   {
    "title": "Road Closure- National Forest System Roads #747 and 7471 Medora Ranger District",
@@ -340,8 +332,8 @@
     0,
     0,
     2,
-    9,
-    9
+    4,
+    11
    ],
    "past3": 0,
    "next3": 0
@@ -381,7 +373,7 @@
     0,
     1,
     2,
-    11,
+    7,
     11
    ],
    "past3": 0,
@@ -422,8 +414,8 @@
     0,
     0,
     2,
-    7,
-    7
+    3,
+    6
    ],
    "past3": 0,
    "next3": 0
