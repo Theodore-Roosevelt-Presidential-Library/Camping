@@ -1,5 +1,5 @@
 {
- "built": "2026-10-24T01:07:23Z",
+ "built": "2026-10-24T06:56:09Z",
  "fire": {
   "danger": [
    {
@@ -299,29 +299,22 @@
   {
    "event": "Wind Advisory",
    "severity": "Moderate",
-   "headline": "Wind Advisory issued October 23 at 11:50AM CDT until October 24 at 10:00AM CDT by NWS Bismarck ND",
+   "headline": "Wind Advisory issued October 23 at 8:35PM CDT until October 24 at 10:00AM CDT by NWS Bismarck ND",
    "ends": "2026-10-24T10:00:00-05:00",
    "area": "Divide; Burke; Williams; Mountrail; McKenzie; Dunn; Golden Valley; Billings; Stark; Slope; Hettinger; Bowman; Adams"
-  },
-  {
-   "event": "Red Flag Warning",
-   "severity": "Severe",
-   "headline": "Red Flag Warning issued October 23 at 11:18AM CDT until October 23 at 9:00PM CDT by NWS Bismarck ND",
-   "ends": "2026-10-23T21:00:00-05:00",
-   "area": "Slope; Bowman"
   }
  ],
  "rain": [
   {
    "place": "Medora",
    "dates": [
-    "2026-10-20",
     "2026-10-21",
     "2026-10-22",
     "2026-10-23",
     "2026-10-24",
     "2026-10-25",
-    "2026-10-26"
+    "2026-10-26",
+    "2026-10-27"
    ],
    "precip": [
     0.0,
@@ -329,8 +322,8 @@
     0.0,
     0.0,
     0.0,
-    0.0,
-    0.012
+    0.098,
+    0.028
    ],
    "snow": [
     0.0,
@@ -338,31 +331,31 @@
     0.0,
     0.0,
     0.0,
-    0.0,
-    0.083
+    0.689,
+    0.0
    ],
    "chance": [
     0,
     0,
-    0,
     1,
-    0,
-    10,
-    27
+    3,
+    20,
+    30,
+    14
    ],
    "past3": 0,
-   "next3": 0.01
+   "next3": 0.13
   },
   {
    "place": "North Unit / Watford City",
    "dates": [
-    "2026-10-20",
     "2026-10-21",
     "2026-10-22",
     "2026-10-23",
     "2026-10-24",
     "2026-10-25",
-    "2026-10-26"
+    "2026-10-26",
+    "2026-10-27"
    ],
    "precip": [
     0.0,
@@ -370,48 +363,7 @@
     0.0,
     0.0,
     0.0,
-    0.0,
-    0.0
-   ],
-   "snow": [
-    0.0,
-    0.0,
-    0.0,
-    0.0,
-    0.0,
-    0.0,
-    0.0
-   ],
-   "chance": [
-    0,
-    1,
-    1,
-    1,
-    2,
-    4,
-    10
-   ],
-   "past3": 0,
-   "next3": 0
-  },
-  {
-   "place": "Southern grassland (Amidon)",
-   "dates": [
-    "2026-10-20",
-    "2026-10-21",
-    "2026-10-22",
-    "2026-10-23",
-    "2026-10-24",
-    "2026-10-25",
-    "2026-10-26"
-   ],
-   "precip": [
-    0.0,
-    0.0,
-    0.0,
-    0.0,
-    0.0,
-    0.0,
+    0.004,
     0.031
    ],
    "snow": [
@@ -421,19 +373,60 @@
     0.0,
     0.0,
     0.0,
-    0.083
+    0.0
+   ],
+   "chance": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    7,
+    22
+   ],
+   "past3": 0,
+   "next3": 0.04
+  },
+  {
+   "place": "Southern grassland (Amidon)",
+   "dates": [
+    "2026-10-21",
+    "2026-10-22",
+    "2026-10-23",
+    "2026-10-24",
+    "2026-10-25",
+    "2026-10-26",
+    "2026-10-27"
+   ],
+   "precip": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.165,
+    0.028
+   ],
+   "snow": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.909,
+    0.0
    ],
    "chance": [
     0,
     0,
-    0,
     1,
-    0,
-    14,
-    29
+    2,
+    30,
+    37,
+    18
    ],
    "past3": 0,
-   "next3": 0.03
+   "next3": 0.19
   }
  ],
  "flags": {
