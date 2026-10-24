@@ -1,5 +1,5 @@
 {
- "built": "2026-10-24T12:49:31Z",
+ "built": "2026-10-24T18:46:03Z",
  "fire": {
   "danger": [
    {
@@ -295,15 +295,7 @@
    "order": "01-18-07-24-01"
   }
  ],
- "weather": [
-  {
-   "event": "Wind Advisory",
-   "severity": "Moderate",
-   "headline": "Wind Advisory issued October 24 at 4:31AM CDT until October 24 at 10:00AM CDT by NWS Bismarck ND",
-   "ends": "2026-10-24T10:00:00-05:00",
-   "area": "Divide; Burke; Williams; Mountrail; McKenzie; Dunn; Golden Valley; Billings; Stark; Slope; Hettinger; Bowman; Adams"
-  }
- ],
+ "weather": [],
  "rain": [
   {
    "place": "Medora",
@@ -322,8 +314,8 @@
     0.0,
     0.0,
     0.0,
-    0.043,
-    0.004
+    0.056,
+    0.028
    ],
    "snow": [
     0.0,
@@ -331,7 +323,7 @@
     0.0,
     0.0,
     0.0,
-    0.165,
+    0.227,
     0.0
    ],
    "chance": [
@@ -339,12 +331,12 @@
     0,
     1,
     0,
-    14,
+    4,
     46,
-    16
+    26
    ],
    "past3": 0,
-   "next3": 0.05
+   "next3": 0.08
   },
   {
    "place": "North Unit / Watford City",
@@ -363,8 +355,8 @@
     0.0,
     0.0,
     0.0,
-    0.0,
-    0.012
+    0.004,
+    0.035
    ],
    "snow": [
     0.0,
@@ -373,7 +365,7 @@
     0.0,
     0.0,
     0.0,
-    0.0
+    0.028
    ],
    "chance": [
     1,
@@ -381,11 +373,11 @@
     1,
     0,
     1,
-    13,
-    22
+    24,
+    27
    ],
    "past3": 0,
-   "next3": 0.01
+   "next3": 0.04
   },
   {
    "place": "Southern grassland (Amidon)",
@@ -404,8 +396,8 @@
     0.0,
     0.0,
     0.0,
-    0.063,
-    0.008
+    0.337,
+    0.0
    ],
    "snow": [
     0.0,
@@ -413,7 +405,7 @@
     0.0,
     0.0,
     0.0,
-    0.358,
+    1.619,
     0.0
    ],
    "chance": [
@@ -421,12 +413,12 @@
     0,
     1,
     0,
-    22,
-    48,
-    23
+    9,
+    50,
+    28
    ],
    "past3": 0,
-   "next3": 0.07
+   "next3": 0.34
   }
  ],
  "flags": {
