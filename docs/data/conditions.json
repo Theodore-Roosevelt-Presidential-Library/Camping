@@ -1,28 +1,28 @@
 {
- "built": "2026-10-26T07:12:32Z",
+ "built": "2026-10-26T14:23:33Z",
  "fire": {
   "danger": [
    {
     "county": "Billings",
-    "today": 3,
+    "today": 1,
     "days": [
      1,
+     2,
+     2,
      1,
-     2,
-     2,
-     2,
+     1,
      2
     ]
    },
    {
     "county": "Golden Valley",
-    "today": 3,
+    "today": 1,
     "days": [
      1,
+     2,
+     2,
      1,
-     2,
-     2,
-     2,
+     1,
      2
     ]
    },
@@ -30,34 +30,34 @@
     "county": "McKenzie",
     "today": 2,
     "days": [
-     2,
-     1,
      1,
      2,
+     2,
+     1,
      1,
      1
     ]
    },
    {
     "county": "Slope",
-    "today": 3,
+    "today": 1,
     "days": [
-     1,
-     1,
+     2,
      3,
      3,
+     2,
      2,
      2
     ]
    },
    {
     "county": "Stark",
-    "today": 2,
+    "today": 1,
     "days": [
      1,
+     2,
+     2,
      1,
-     2,
-     2,
      1,
      1
     ]
@@ -66,20 +66,20 @@
     "county": "Dunn",
     "today": 2,
     "days": [
-     2,
      1,
      2,
      2,
+     1,
      1,
      1
     ]
    },
    {
     "county": "Bowman",
-    "today": 3,
+    "today": 1,
     "days": [
-     1,
-     1,
+     2,
+     2,
      2,
      2,
      2,
@@ -117,7 +117,7 @@
     "campfires_at": "Very High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 3,
+    "index": 1,
     "expires": null,
     "note": "Includes all cities in Golden Valley County (Beach, Golva and Sentinel Butte)"
    },
@@ -128,7 +128,7 @@
     "campfires_at": "Low",
     "campfires_flag": false,
     "camping_at": null,
-    "index": 3,
+    "index": 1,
     "expires": "2027-01-01T06:00:00Z",
     "note": "Includes the cities of Medora, Fryburg, and Fairfield."
    },
@@ -139,7 +139,7 @@
     "campfires_at": "High",
     "campfires_flag": true,
     "camping_at": "Extreme",
-    "index": 2,
+    "index": 1,
     "expires": "2027-01-01T06:00:00Z",
     "note": "Burn restriction includes all incorporated cities within Stark County. City of Dickinson Residents - please refer to the information at www.dickinsonfire.com for specific ordinances enacted within the City of Dickinson limits."
    },
@@ -150,7 +150,7 @@
     "campfires_at": "Low",
     "campfires_flag": true,
     "camping_at": "Low",
-    "index": 3,
+    "index": 1,
     "expires": "2027-01-01T06:00:00Z",
     "note": "Cities in Bowman County are not included in the County Burn Restriction"
    },
@@ -161,7 +161,7 @@
     "campfires_at": "Low",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 3,
+    "index": 1,
     "expires": "2027-01-01T06:00:00Z",
     "note": "Includes all cities in Slope County."
    },
@@ -172,7 +172,7 @@
     "campfires_at": "High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 3,
+    "index": 1,
     "expires": "2027-01-01T06:00:00Z",
     "note": ""
    },
@@ -194,7 +194,7 @@
     "campfires_at": "High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 3,
+    "index": 1,
     "expires": "2027-01-01T06:00:00Z",
     "note": ""
    },
@@ -205,7 +205,7 @@
     "campfires_at": "High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 2,
+    "index": 1,
     "expires": "2027-01-01T06:00:00Z",
     "note": ""
    },
@@ -216,7 +216,7 @@
     "campfires_at": "High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 3,
+    "index": 1,
     "expires": "2027-01-01T06:00:00Z",
     "note": ""
    },
@@ -243,7 +243,7 @@
     "note": ""
    }
   ],
-  "published": "2026-10-25T04:15:00Z"
+  "published": "2026-10-26T04:15:00Z"
  },
  "orders": [
   {
@@ -312,7 +312,7 @@
     0.0,
     0.0,
     0.0,
-    0.0,
+    0.142,
     0.0,
     0.0,
     0.0
@@ -321,7 +321,7 @@
     0.0,
     0.0,
     0.0,
-    0.0,
+    0.634,
     0.0,
     0.0,
     0.0
@@ -330,8 +330,8 @@
     1,
     0,
     0,
-    32,
-    8,
+    41,
+    6,
     2,
     0
    ],
@@ -354,7 +354,7 @@
     0.0,
     0.0,
     0.0,
-    0.016,
+    0.0,
     0.0,
     0.0
    ],
@@ -371,13 +371,13 @@
     1,
     0,
     0,
-    4,
-    50,
-    4,
+    8,
+    22,
+    5,
     0
    ],
    "past3": 0,
-   "next3": 0.02
+   "next3": 0
   },
   {
    "place": "Southern grassland (Amidon)",
@@ -394,7 +394,7 @@
     0.0,
     0.0,
     0.0,
-    0.0,
+    0.071,
     0.0,
     0.0,
     0.0
@@ -403,7 +403,7 @@
     0.0,
     0.0,
     0.0,
-    0.0,
+    0.276,
     0.0,
     0.0,
     0.0
@@ -412,8 +412,8 @@
     1,
     0,
     0,
-    38,
-    4,
+    35,
+    6,
     1,
     1
    ],
