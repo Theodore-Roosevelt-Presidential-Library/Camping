@@ -1,16 +1,16 @@
 {
- "built": "2026-10-27T07:00:56Z",
+ "built": "2026-10-27T12:58:29Z",
  "fire": {
   "danger": [
    {
     "county": "Billings",
     "today": 1,
     "days": [
+     3,
+     3,
+     1,
      1,
      2,
-     2,
-     1,
-     1,
      2
     ]
    },
@@ -18,21 +18,21 @@
     "county": "Golden Valley",
     "today": 1,
     "days": [
+     3,
+     3,
+     1,
      1,
      2,
-     2,
-     1,
-     1,
      2
     ]
    },
    {
     "county": "McKenzie",
-    "today": 2,
+    "today": 1,
     "days": [
+     2,
      1,
-     2,
-     2,
+     1,
      1,
      1,
      1
@@ -40,35 +40,35 @@
    },
    {
     "county": "Slope",
-    "today": 1,
+    "today": 3,
     "days": [
-     2,
      3,
      3,
+     1,
+     1,
      2,
-     2,
-     2
+     3
     ]
    },
    {
     "county": "Stark",
     "today": 1,
     "days": [
-     1,
      2,
      2,
      1,
      1,
-     1
+     1,
+     2
     ]
    },
    {
     "county": "Dunn",
-    "today": 2,
+    "today": 1,
     "days": [
+     2,
+     2,
      1,
-     2,
-     2,
      1,
      1,
      1
@@ -76,12 +76,12 @@
    },
    {
     "county": "Bowman",
-    "today": 1,
+    "today": 2,
     "days": [
      2,
      2,
-     2,
-     2,
+     1,
+     1,
      2,
      2
     ]
@@ -95,7 +95,7 @@
     "campfires_at": "Low",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 2,
+    "index": 1,
     "expires": "2027-01-01T06:00:00Z",
     "note": "This declaration includes all of McKenzie County."
    },
@@ -106,7 +106,7 @@
     "campfires_at": "High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 2,
+    "index": 1,
     "expires": "2027-01-01T06:00:00Z",
     "note": "Includes: Dodge, Halliday, Dunn Center, & Killdeer\r\nKilldeer also has additional ordinance"
    },
@@ -150,7 +150,7 @@
     "campfires_at": "Low",
     "campfires_flag": true,
     "camping_at": "Low",
-    "index": 1,
+    "index": 2,
     "expires": "2027-01-01T06:00:00Z",
     "note": "Cities in Bowman County are not included in the County Burn Restriction"
    },
@@ -161,7 +161,7 @@
     "campfires_at": "Low",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 1,
+    "index": 3,
     "expires": "2027-01-01T06:00:00Z",
     "note": "Includes all cities in Slope County."
    },
@@ -172,7 +172,7 @@
     "campfires_at": "High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 1,
+    "index": 3,
     "expires": "2027-01-01T06:00:00Z",
     "note": ""
    },
@@ -183,7 +183,7 @@
     "campfires_at": "High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 2,
+    "index": 1,
     "expires": "2027-01-01T06:00:00Z",
     "note": ""
    },
@@ -194,7 +194,7 @@
     "campfires_at": "High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 1,
+    "index": 2,
     "expires": "2027-01-01T06:00:00Z",
     "note": ""
    },
@@ -227,7 +227,7 @@
     "campfires_at": "High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 2,
+    "index": 1,
     "expires": "2027-01-01T06:00:00Z",
     "note": ""
    },
@@ -238,12 +238,12 @@
     "campfires_at": "High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 2,
+    "index": 1,
     "expires": "2027-01-01T06:00:00Z",
     "note": ""
    }
   ],
-  "published": "2026-10-26T04:15:00Z"
+  "published": "2026-10-27T04:15:00Z"
  },
  "orders": [
   {
@@ -312,7 +312,7 @@
     0.0,
     0.0,
     0.142,
-    0.016,
+    0.0,
     0.0,
     0.0,
     0.0
@@ -330,10 +330,10 @@
     0,
     0,
     41,
-    7,
+    12,
     1,
     0,
-    9
+    7
    ],
    "past3": 0.14,
    "next3": 0
@@ -353,7 +353,7 @@
     0.0,
     0.0,
     0.0,
-    0.031,
+    0.059,
     0.0,
     0.0,
     0.0
@@ -362,7 +362,7 @@
     0.0,
     0.0,
     0.0,
-    0.028,
+    0.083,
     0.0,
     0.0,
     0.0
@@ -371,10 +371,10 @@
     0,
     0,
     11,
-    20,
+    18,
     0,
     0,
-    9
+    7
    ],
    "past3": 0,
    "next3": 0
@@ -412,10 +412,10 @@
     0,
     0,
     35,
-    6,
-    1,
+    4,
+    2,
     0,
-    5
+    3
    ],
    "past3": 0.07,
    "next3": 0
