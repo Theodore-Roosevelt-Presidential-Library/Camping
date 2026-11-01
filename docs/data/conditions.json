@@ -1,5 +1,5 @@
 {
- "built": "2026-11-01T12:42:24Z",
+ "built": "2026-11-01T18:42:15Z",
  "fire": {
   "danger": [
    {
@@ -295,15 +295,7 @@
    "order": "01-18-07-24-01"
   }
  ],
- "weather": [
-  {
-   "event": "Dense Fog Advisory",
-   "severity": "Moderate",
-   "headline": "Dense Fog Advisory issued November 1 at 5:50AM CST until November 1 at 9:00AM CST by NWS Bismarck ND",
-   "ends": "2026-11-01T09:00:00-06:00",
-   "area": "Divide; Burke; Renville; Bottineau; Rolette; Williams; Mountrail; McHenry; Pierce; McKenzie; Dunn; Mercer; Oliver; Sheridan; Wells; Golden Valley; Billings; Stark; Slope; Hettinger; Bowman; Adams; Northwest Ward; Central and Southern Ward/Minot Area; Western McLean; Eastern McLean"
-  }
- ],
+ "weather": [],
  "rain": [
   {
    "place": "Medora",
@@ -320,8 +312,8 @@
     0.0,
     0.0,
     0.028,
-    0.098,
-    0.839,
+    0.102,
+    1.11,
     0.0,
     0.0
    ],
@@ -338,13 +330,13 @@
     0,
     1,
     11,
-    84,
-    85,
-    7,
+    81,
+    87,
+    5,
     1
    ],
    "past3": 0.03,
-   "next3": 0.84
+   "next3": 1.11
   },
   {
    "place": "North Unit / Watford City",
@@ -361,8 +353,8 @@
     0.0,
     0.0,
     0.0,
-    0.016,
-    0.193,
+    0.102,
+    0.654,
     0.0,
     0.0
    ],
@@ -379,13 +371,13 @@
     0,
     3,
     11,
-    83,
-    84,
-    7,
+    65,
+    86,
+    4,
     1
    ],
    "past3": 0,
-   "next3": 0.19
+   "next3": 0.65
   },
   {
    "place": "Southern grassland (Amidon)",
@@ -402,8 +394,8 @@
     0.0,
     0.0,
     0.0,
-    0.114,
-    0.665,
+    0.075,
+    0.531,
     0.0,
     0.0
    ],
@@ -420,13 +412,13 @@
     0,
     1,
     5,
-    83,
-    83,
+    81,
+    86,
     7,
     1
    ],
    "past3": 0,
-   "next3": 0.67
+   "next3": 0.53
   }
  ],
  "flags": {
