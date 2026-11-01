@@ -1,5 +1,5 @@
 {
- "built": "2026-10-31T18:42:13Z",
+ "built": "2026-11-01T00:54:09Z",
  "fire": {
   "danger": [
    {
@@ -299,8 +299,8 @@
   {
    "event": "Dense Fog Advisory",
    "severity": "Moderate",
-   "headline": "Dense Fog Advisory issued October 31 at 12:15PM CDT until October 31 at 3:00PM CDT by NWS Bismarck ND",
-   "ends": "2026-10-31T15:00:00-05:00",
+   "headline": "Dense Fog Advisory issued October 31 at 5:46PM CDT until November 1 at 9:00AM CST by NWS Bismarck ND",
+   "ends": "2026-11-01T09:00:00-06:00",
    "area": "Slope; Bowman; Adams"
   }
  ],
@@ -320,9 +320,9 @@
     0.0,
     0.0,
     0.0,
-    0.031,
-    0.031,
-    0.362,
+    0.016,
+    0.13,
+    0.91,
     0.0
    ],
    "snow": [
@@ -339,12 +339,12 @@
     0,
     1,
     7,
-    59,
-    99,
-    24
+    71,
+    100,
+    20
    ],
    "past3": 0,
-   "next3": 0.39
+   "next3": 1.04
   },
   {
    "place": "North Unit / Watford City",
@@ -361,9 +361,9 @@
     0.0,
     0.0,
     0.0,
-    0.0,
-    0.043,
-    0.069,
+    0.016,
+    0.047,
+    0.25,
     0.0
    ],
    "snow": [
@@ -379,13 +379,13 @@
     0,
     0,
     3,
-    8,
-    51,
-    96,
-    20
+    9,
+    55,
+    94,
+    17
    ],
    "past3": 0,
-   "next3": 0.11
+   "next3": 0.3
   },
   {
    "place": "Southern grassland (Amidon)",
@@ -402,9 +402,9 @@
     0.0,
     0.0,
     0.0,
-    0.0,
-    0.118,
-    0.338,
+    0.016,
+    0.102,
+    0.745,
     0.0
    ],
    "snow": [
@@ -420,13 +420,13 @@
     0,
     0,
     1,
-    12,
-    72,
+    7,
+    76,
     99,
-    34
+    24
    ],
    "past3": 0,
-   "next3": 0.46
+   "next3": 0.85
   }
  ],
  "flags": {
