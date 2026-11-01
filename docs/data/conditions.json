@@ -1,5 +1,5 @@
 {
- "built": "2026-11-01T00:54:09Z",
+ "built": "2026-11-01T06:42:28Z",
  "fire": {
   "danger": [
    {
@@ -299,30 +299,37 @@
   {
    "event": "Dense Fog Advisory",
    "severity": "Moderate",
-   "headline": "Dense Fog Advisory issued October 31 at 5:46PM CDT until November 1 at 9:00AM CST by NWS Bismarck ND",
+   "headline": "Dense Fog Advisory issued November 1 at 1:30AM CDT until November 1 at 9:00AM CST by NWS Bismarck ND",
    "ends": "2026-11-01T09:00:00-06:00",
-   "area": "Slope; Bowman; Adams"
+   "area": "Divide; Burke; Renville; Williams; Mountrail; McKenzie; Dunn; Golden Valley; Billings; Northwest Ward; Central and Southern Ward/Minot Area; Western McLean"
+  },
+  {
+   "event": "Dense Fog Advisory",
+   "severity": "Moderate",
+   "headline": "Dense Fog Advisory issued November 1 at 1:30AM CDT until November 1 at 9:00AM CST by NWS Bismarck ND",
+   "ends": "2026-11-01T09:00:00-06:00",
+   "area": "Stark; Slope; Hettinger; Bowman; Adams"
   }
  ],
  "rain": [
   {
    "place": "Medora",
    "dates": [
-    "2026-10-28",
     "2026-10-29",
     "2026-10-30",
     "2026-10-31",
     "2026-11-01",
     "2026-11-02",
-    "2026-11-03"
+    "2026-11-03",
+    "2026-11-04"
    ],
    "precip": [
     0.0,
     0.0,
+    0.028,
+    0.047,
+    0.724,
     0.0,
-    0.016,
-    0.13,
-    0.91,
     0.0
    ],
    "snow": [
@@ -336,34 +343,34 @@
    ],
    "chance": [
     0,
-    0,
     1,
-    7,
-    71,
+    11,
+    53,
     100,
-    20
+    11,
+    1
    ],
-   "past3": 0,
-   "next3": 1.04
+   "past3": 0.03,
+   "next3": 0.72
   },
   {
    "place": "North Unit / Watford City",
    "dates": [
-    "2026-10-28",
     "2026-10-29",
     "2026-10-30",
     "2026-10-31",
     "2026-11-01",
     "2026-11-02",
-    "2026-11-03"
+    "2026-11-03",
+    "2026-11-04"
    ],
    "precip": [
     0.0,
     0.0,
     0.0,
     0.016,
-    0.047,
-    0.25,
+    0.417,
+    0.0,
     0.0
    ],
    "snow": [
@@ -377,34 +384,34 @@
    ],
    "chance": [
     0,
-    0,
     3,
     9,
-    55,
-    94,
-    17
+    44,
+    97,
+    8,
+    1
    ],
    "past3": 0,
-   "next3": 0.3
+   "next3": 0.42
   },
   {
    "place": "Southern grassland (Amidon)",
    "dates": [
-    "2026-10-28",
     "2026-10-29",
     "2026-10-30",
     "2026-10-31",
     "2026-11-01",
     "2026-11-02",
-    "2026-11-03"
+    "2026-11-03",
+    "2026-11-04"
    ],
    "precip": [
     0.0,
     0.0,
     0.0,
-    0.016,
-    0.102,
-    0.745,
+    0.087,
+    0.9,
+    0.0,
     0.0
    ],
    "snow": [
@@ -418,15 +425,15 @@
    ],
    "chance": [
     0,
-    0,
     1,
-    7,
-    76,
-    99,
-    24
+    5,
+    58,
+    100,
+    15,
+    1
    ],
    "past3": 0,
-   "next3": 0.85
+   "next3": 0.9
   }
  ],
  "flags": {
