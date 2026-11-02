@@ -1,5 +1,5 @@
 {
- "built": "2026-11-02T12:42:47Z",
+ "built": "2026-11-02T18:42:25Z",
  "fire": {
   "danger": [
    {
@@ -299,7 +299,7 @@
   {
    "event": "Wind Advisory",
    "severity": "Moderate",
-   "headline": "Wind Advisory issued November 2 at 5:42AM CST until November 3 at 12:00AM CST by NWS Bismarck ND",
+   "headline": "Wind Advisory issued November 2 at 12:09PM CST until November 3 at 12:00AM CST by NWS Bismarck ND",
    "ends": "2026-11-03T00:00:00-06:00",
    "area": "Slope; Hettinger; Grant; Bowman; Adams; Western Sioux; Eastern Sioux"
   }
@@ -320,8 +320,8 @@
     0.0,
     0.028,
     0.055,
-    0.602,
-    0.016,
+    0.346,
+    0.0,
     0.0,
     0.0
    ],
@@ -339,12 +339,12 @@
     11,
     94,
     86,
-    4,
+    0,
     0,
     0
    ],
    "past3": 0.08,
-   "next3": 0.02
+   "next3": 0
   },
   {
    "place": "North Unit / Watford City",
@@ -361,7 +361,7 @@
     0.0,
     0.0,
     0.028,
-    0.547,
+    0.531,
     0.0,
     0.0,
     0.0
@@ -380,7 +380,7 @@
     11,
     72,
     95,
-    5,
+    1,
     0,
     0
    ],
@@ -402,8 +402,8 @@
     0.0,
     0.0,
     0.173,
-    0.535,
-    0.016,
+    0.268,
+    0.0,
     0.0,
     0.0
    ],
@@ -420,13 +420,13 @@
     1,
     5,
     88,
-    78,
-    3,
-    1,
+    80,
+    0,
+    0,
     0
    ],
    "past3": 0.17,
-   "next3": 0.02
+   "next3": 0
   }
  ],
  "flags": {
