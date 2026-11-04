@@ -1,5 +1,5 @@
 {
- "built": "2026-11-04T06:43:47Z",
+ "built": "2026-11-04T12:42:30Z",
  "fire": {
   "danger": [
    {
@@ -31,7 +31,7 @@
     "today": 1,
     "days": [
      1,
-     1,
+     2,
      2,
      2,
      2,
@@ -40,23 +40,23 @@
    },
    {
     "county": "Slope",
-    "today": 2,
+    "today": 3,
     "days": [
-     2,
-     2,
-     2,
-     2,
-     2,
-     2
+     3,
+     3,
+     3,
+     3,
+     3,
+     3
     ]
    },
    {
     "county": "Stark",
-    "today": 1,
+    "today": 2,
     "days": [
+     1,
      2,
-     1,
-     1,
+     2,
      2,
      2,
      2
@@ -64,13 +64,13 @@
    },
    {
     "county": "Dunn",
-    "today": 1,
+    "today": 2,
     "days": [
-     2,
-     1,
      1,
      2,
-     1,
+     2,
+     2,
+     2,
      2
     ]
    },
@@ -82,7 +82,7 @@
      2,
      2,
      2,
-     2,
+     3,
      2
     ]
    }
@@ -106,7 +106,7 @@
     "campfires_at": "High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 1,
+    "index": 2,
     "expires": "2027-01-01T06:00:00Z",
     "note": "Includes: Dodge, Halliday, Dunn Center, & Killdeer\r\nKilldeer also has additional ordinance"
    },
@@ -139,7 +139,7 @@
     "campfires_at": "High",
     "campfires_flag": true,
     "camping_at": "Extreme",
-    "index": 1,
+    "index": 2,
     "expires": "2027-01-01T06:00:00Z",
     "note": "Burn restriction includes all incorporated cities within Stark County. City of Dickinson Residents - please refer to the information at www.dickinsonfire.com for specific ordinances enacted within the City of Dickinson limits."
    },
@@ -161,7 +161,7 @@
     "campfires_at": "Low",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 2,
+    "index": 3,
     "expires": "2027-01-01T06:00:00Z",
     "note": "Includes all cities in Slope County."
    },
@@ -172,7 +172,7 @@
     "campfires_at": "High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 2,
+    "index": 3,
     "expires": "2027-01-01T06:00:00Z",
     "note": ""
    },
@@ -183,7 +183,7 @@
     "campfires_at": "High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 1,
+    "index": 2,
     "expires": "2027-01-01T06:00:00Z",
     "note": ""
    },
@@ -205,7 +205,7 @@
     "campfires_at": "High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 1,
+    "index": 2,
     "expires": "2027-01-01T06:00:00Z",
     "note": ""
    },
@@ -227,7 +227,7 @@
     "campfires_at": "High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 1,
+    "index": 2,
     "expires": "2027-01-01T06:00:00Z",
     "note": ""
    },
@@ -243,7 +243,7 @@
     "note": ""
    }
   ],
-  "published": "2026-11-03T04:15:00Z"
+  "published": "2026-11-04T04:15:00Z"
  },
  "orders": [
   {
@@ -300,21 +300,21 @@
   {
    "place": "Medora",
    "dates": [
-    "2026-10-31",
     "2026-11-01",
     "2026-11-02",
     "2026-11-03",
     "2026-11-04",
     "2026-11-05",
-    "2026-11-06"
+    "2026-11-06",
+    "2026-11-07"
    ],
    "precip": [
-    0.028,
     0.055,
     0.35,
     0.0,
     0.0,
     0.0,
+    0.0,
     0.0
    ],
    "snow": [
@@ -327,32 +327,32 @@
     0.0
    ],
    "chance": [
-    11,
     94,
     86,
     0,
     0,
     0,
-    2
+    3,
+    0
    ],
-   "past3": 0.43,
+   "past3": 0.4,
    "next3": 0
   },
   {
    "place": "North Unit / Watford City",
    "dates": [
-    "2026-10-31",
     "2026-11-01",
     "2026-11-02",
     "2026-11-03",
     "2026-11-04",
     "2026-11-05",
-    "2026-11-06"
+    "2026-11-06",
+    "2026-11-07"
    ],
    "precip": [
-    0.0,
     0.028,
     0.488,
+    0.0,
     0.0,
     0.0,
     0.0,
@@ -368,9 +368,9 @@
     0.0
    ],
    "chance": [
-    11,
     72,
     95,
+    0,
     0,
     0,
     0,
@@ -382,18 +382,18 @@
   {
    "place": "Southern grassland (Amidon)",
    "dates": [
-    "2026-10-31",
     "2026-11-01",
     "2026-11-02",
     "2026-11-03",
     "2026-11-04",
     "2026-11-05",
-    "2026-11-06"
+    "2026-11-06",
+    "2026-11-07"
    ],
    "precip": [
-    0.0,
     0.173,
     0.224,
+    0.0,
     0.0,
     0.0,
     0.0,
@@ -409,13 +409,13 @@
     0.0
    ],
    "chance": [
-    5,
     88,
     80,
     0,
     0,
     0,
-    2
+    3,
+    0
    ],
    "past3": 0.4,
    "next3": 0
