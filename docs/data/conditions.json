@@ -1,5 +1,5 @@
 {
- "built": "2026-11-05T12:42:43Z",
+ "built": "2026-11-05T18:42:16Z",
  "fire": {
   "danger": [
    {
@@ -106,7 +106,7 @@
     "campfires_at": "High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 2,
+    "index": 1,
     "expires": "2027-01-01T06:00:00Z",
     "note": "Includes: Dodge, Halliday, Dunn Center, & Killdeer\r\nKilldeer also has additional ordinance"
    },
@@ -117,7 +117,7 @@
     "campfires_at": "Very High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 2,
+    "index": 1,
     "expires": null,
     "note": "Includes all cities in Golden Valley County (Beach, Golva and Sentinel Butte)"
    },
@@ -128,7 +128,7 @@
     "campfires_at": "Low",
     "campfires_flag": false,
     "camping_at": null,
-    "index": 2,
+    "index": 1,
     "expires": "2027-01-01T06:00:00Z",
     "note": "Includes the cities of Medora, Fryburg, and Fairfield."
    },
@@ -139,7 +139,7 @@
     "campfires_at": "High",
     "campfires_flag": true,
     "camping_at": "Extreme",
-    "index": 2,
+    "index": 1,
     "expires": "2027-01-01T06:00:00Z",
     "note": "Burn restriction includes all incorporated cities within Stark County. City of Dickinson Residents - please refer to the information at www.dickinsonfire.com for specific ordinances enacted within the City of Dickinson limits."
    },
@@ -161,7 +161,7 @@
     "campfires_at": "Low",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 3,
+    "index": 2,
     "expires": "2027-01-01T06:00:00Z",
     "note": "Includes all cities in Slope County."
    },
@@ -172,7 +172,7 @@
     "campfires_at": "High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 3,
+    "index": 2,
     "expires": "2027-01-01T06:00:00Z",
     "note": ""
    },
@@ -183,7 +183,7 @@
     "campfires_at": "High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 2,
+    "index": 1,
     "expires": "2027-01-01T06:00:00Z",
     "note": ""
    },
@@ -205,7 +205,7 @@
     "campfires_at": "High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 2,
+    "index": 1,
     "expires": "2027-01-01T06:00:00Z",
     "note": ""
    },
@@ -216,7 +216,7 @@
     "campfires_at": "High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 2,
+    "index": 1,
     "expires": "2027-01-01T06:00:00Z",
     "note": ""
    },
@@ -227,7 +227,7 @@
     "campfires_at": "High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 2,
+    "index": 1,
     "expires": "2027-01-01T06:00:00Z",
     "note": ""
    },
@@ -295,7 +295,22 @@
    "order": "01-18-07-24-01"
   }
  ],
- "weather": [],
+ "weather": [
+  {
+   "event": "Civil Emergency Message",
+   "severity": "Unknown",
+   "headline": "Civil Emergency Message issued November 5 at 12:31PM CST by NWS Bismarck ND",
+   "ends": "2026-11-05T13:45:00-06:00",
+   "area": "Adams, ND; Barnes, ND; Benson, ND; Billings, ND; Bottineau, ND; Bowman, ND; Burke, ND; Burleigh, ND; Cass, ND; Cavalier, ND; Dickey, ND; Divide, ND; Dunn, ND; Eddy, ND; Emmons, ND; Foster, ND; Golden Valley, ND; Grand Forks, ND; Grant, ND; Griggs, ND; Hettinger, ND; Kidder, ND; LaMoure, ND; Logan, ND; McHenry, ND; McIntosh, ND; McKenzie, ND; McLean, ND; Mercer, ND; Morton, ND; Mountrail, ND; Nelson, ND; Oliver, ND; Pembina, ND; Pierce, ND; Ramsey, ND; Ransom, ND; Renville, ND; Richland, ND; Rolette, ND; Sargent, ND; Sheridan, ND; Sioux, ND; Slope, ND; Stark, ND; Steele, ND; Stutsman, ND; Towner, ND; Traill, ND; Walsh, ND; Ward, ND; Wells, ND; Williams, ND"
+  },
+  {
+   "event": "Dense Fog Advisory",
+   "severity": "Moderate",
+   "headline": "Dense Fog Advisory issued November 5 at 10:38AM CST until November 5 at 1:00PM CST by NWS Bismarck ND",
+   "ends": "2026-11-05T13:00:00-06:00",
+   "area": "Divide; Burke; Williams; Mountrail; McKenzie; Dunn; Golden Valley; Billings; Stark; Northwest Ward"
+  }
+ ],
  "rain": [
   {
    "place": "Medora",
@@ -372,7 +387,7 @@
     0,
     0,
     0,
-    1,
+    0,
     0,
     0
    ],
