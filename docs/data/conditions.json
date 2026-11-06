@@ -1,5 +1,5 @@
 {
- "built": "2026-11-05T18:42:16Z",
+ "built": "2026-11-06T00:49:39Z",
  "fire": {
   "danger": [
    {
@@ -295,22 +295,7 @@
    "order": "01-18-07-24-01"
   }
  ],
- "weather": [
-  {
-   "event": "Civil Emergency Message",
-   "severity": "Unknown",
-   "headline": "Civil Emergency Message issued November 5 at 12:31PM CST by NWS Bismarck ND",
-   "ends": "2026-11-05T13:45:00-06:00",
-   "area": "Adams, ND; Barnes, ND; Benson, ND; Billings, ND; Bottineau, ND; Bowman, ND; Burke, ND; Burleigh, ND; Cass, ND; Cavalier, ND; Dickey, ND; Divide, ND; Dunn, ND; Eddy, ND; Emmons, ND; Foster, ND; Golden Valley, ND; Grand Forks, ND; Grant, ND; Griggs, ND; Hettinger, ND; Kidder, ND; LaMoure, ND; Logan, ND; McHenry, ND; McIntosh, ND; McKenzie, ND; McLean, ND; Mercer, ND; Morton, ND; Mountrail, ND; Nelson, ND; Oliver, ND; Pembina, ND; Pierce, ND; Ramsey, ND; Ransom, ND; Renville, ND; Richland, ND; Rolette, ND; Sargent, ND; Sheridan, ND; Sioux, ND; Slope, ND; Stark, ND; Steele, ND; Stutsman, ND; Towner, ND; Traill, ND; Walsh, ND; Ward, ND; Wells, ND; Williams, ND"
-  },
-  {
-   "event": "Dense Fog Advisory",
-   "severity": "Moderate",
-   "headline": "Dense Fog Advisory issued November 5 at 10:38AM CST until November 5 at 1:00PM CST by NWS Bismarck ND",
-   "ends": "2026-11-05T13:00:00-06:00",
-   "area": "Divide; Burke; Williams; Mountrail; McKenzie; Dunn; Golden Valley; Billings; Stark; Northwest Ward"
-  }
- ],
+ "weather": [],
  "rain": [
   {
    "place": "Medora",
