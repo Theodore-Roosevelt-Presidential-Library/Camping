@@ -1,5 +1,5 @@
 {
- "built": "2026-11-06T18:42:19Z",
+ "built": "2026-11-07T00:47:31Z",
  "fire": {
   "danger": [
    {
@@ -125,7 +125,7 @@
     "kind": "county",
     "name": "Billings",
     "declared": true,
-    "campfires_at": "Low",
+    "campfires_at": "High",
     "campfires_flag": false,
     "camping_at": null,
     "index": 2,
@@ -413,7 +413,7 @@
     0,
     0,
     0,
-    1,
+    0,
     0,
     0
    ],
