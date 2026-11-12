@@ -1,14 +1,14 @@
 {
- "built": "2026-11-12T06:44:13Z",
+ "built": "2026-11-12T12:42:30Z",
  "fire": {
   "danger": [
    {
     "county": "Billings",
-    "today": 2,
+    "today": 1,
     "days": [
-     1,
      2,
      1,
+     2,
      2,
      2,
      2
@@ -16,11 +16,11 @@
    },
    {
     "county": "Golden Valley",
-    "today": 2,
+    "today": 1,
     "days": [
-     1,
      2,
      1,
+     2,
      2,
      2,
      2
@@ -33,18 +33,18 @@
      1,
      1,
      1,
-     1,
-     1,
+     2,
+     2,
      1
     ]
    },
    {
     "county": "Slope",
-    "today": 3,
+    "today": 1,
     "days": [
-     1,
      2,
      2,
+     3,
      3,
      3,
      3
@@ -57,8 +57,8 @@
      1,
      1,
      1,
-     1,
-     1,
+     2,
+     2,
      1
     ]
    },
@@ -69,17 +69,17 @@
      1,
      1,
      1,
-     1,
-     1,
+     2,
+     2,
      1
     ]
    },
    {
     "county": "Bowman",
-    "today": 2,
+    "today": 1,
     "days": [
-     1,
      2,
+     1,
      2,
      2,
      2,
@@ -117,7 +117,7 @@
     "campfires_at": "Very High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 2,
+    "index": 1,
     "expires": null,
     "note": "Includes all cities in Golden Valley County (Beach, Golva and Sentinel Butte)"
    },
@@ -128,7 +128,7 @@
     "campfires_at": "High",
     "campfires_flag": false,
     "camping_at": null,
-    "index": 2,
+    "index": 1,
     "expires": "2027-01-01T06:00:00Z",
     "note": "Includes the cities of Medora, Fryburg, and Fairfield."
    },
@@ -150,7 +150,7 @@
     "campfires_at": "Low",
     "campfires_flag": true,
     "camping_at": "Low",
-    "index": 2,
+    "index": 1,
     "expires": "2027-01-01T06:00:00Z",
     "note": "Cities in Bowman County are not included in the County Burn Restriction"
    },
@@ -161,7 +161,7 @@
     "campfires_at": "Low",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 3,
+    "index": 1,
     "expires": "2027-01-01T06:00:00Z",
     "note": "Includes all cities in Slope County."
    },
@@ -172,7 +172,7 @@
     "campfires_at": "High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 3,
+    "index": 1,
     "expires": "2027-01-01T06:00:00Z",
     "note": ""
    },
@@ -194,7 +194,7 @@
     "campfires_at": "High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 2,
+    "index": 1,
     "expires": "2027-01-01T06:00:00Z",
     "note": ""
    },
@@ -216,7 +216,7 @@
     "campfires_at": "High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 2,
+    "index": 1,
     "expires": "2027-01-01T06:00:00Z",
     "note": ""
    },
@@ -243,7 +243,7 @@
     "note": ""
    }
   ],
-  "published": "2026-11-11T04:15:00Z"
+  "published": "2026-11-12T04:15:00Z"
  },
  "orders": [
   {
@@ -295,18 +295,26 @@
    "order": "01-18-07-24-01"
   }
  ],
- "weather": [],
+ "weather": [
+  {
+   "event": "Special Weather Statement",
+   "severity": "Moderate",
+   "headline": "Special Weather Statement issued November 12 at 5:59AM CST by NWS Bismarck ND",
+   "ends": "2026-11-12T09:00:00-06:00",
+   "area": "Divide; Burke; Williams; Mountrail; McKenzie; Dunn; Golden Valley; Billings; Stark; Slope; Hettinger; Bowman; Adams"
+  }
+ ],
  "rain": [
   {
    "place": "Medora",
    "dates": [
-    "2026-11-08",
     "2026-11-09",
     "2026-11-10",
     "2026-11-11",
     "2026-11-12",
     "2026-11-13",
-    "2026-11-14"
+    "2026-11-14",
+    "2026-11-15"
    ],
    "precip": [
     0.0,
@@ -327,9 +335,9 @@
     0.0
    ],
    "chance": [
-    1,
     0,
     9,
+    0,
     0,
     0,
     0,
@@ -341,13 +349,13 @@
   {
    "place": "North Unit / Watford City",
    "dates": [
-    "2026-11-08",
     "2026-11-09",
     "2026-11-10",
     "2026-11-11",
     "2026-11-12",
     "2026-11-13",
-    "2026-11-14"
+    "2026-11-14",
+    "2026-11-15"
    ],
    "precip": [
     0.0,
@@ -369,8 +377,8 @@
    ],
    "chance": [
     0,
-    0,
     6,
+    0,
     0,
     0,
     0,
@@ -382,13 +390,13 @@
   {
    "place": "Southern grassland (Amidon)",
    "dates": [
-    "2026-11-08",
     "2026-11-09",
     "2026-11-10",
     "2026-11-11",
     "2026-11-12",
     "2026-11-13",
-    "2026-11-14"
+    "2026-11-14",
+    "2026-11-15"
    ],
    "precip": [
     0.0,
@@ -410,8 +418,8 @@
    ],
    "chance": [
     0,
-    0,
     5,
+    0,
     0,
     0,
     0,
