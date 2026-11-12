@@ -1,5 +1,5 @@
 {
- "built": "2026-11-12T12:42:30Z",
+ "built": "2026-11-12T18:42:36Z",
  "fire": {
   "danger": [
    {
@@ -295,15 +295,7 @@
    "order": "01-18-07-24-01"
   }
  ],
- "weather": [
-  {
-   "event": "Special Weather Statement",
-   "severity": "Moderate",
-   "headline": "Special Weather Statement issued November 12 at 5:59AM CST by NWS Bismarck ND",
-   "ends": "2026-11-12T09:00:00-06:00",
-   "area": "Divide; Burke; Williams; Mountrail; McKenzie; Dunn; Golden Valley; Billings; Stark; Slope; Hettinger; Bowman; Adams"
-  }
- ],
+ "weather": [],
  "rain": [
   {
    "place": "Medora",
