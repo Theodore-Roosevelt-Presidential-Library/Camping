@@ -1,5 +1,5 @@
 {
- "built": "2026-11-13T12:42:38Z",
+ "built": "2026-11-13T18:42:17Z",
  "fire": {
   "danger": [
    {
@@ -295,22 +295,7 @@
    "order": "01-18-07-24-01"
   }
  ],
- "weather": [
-  {
-   "event": "Dense Fog Advisory",
-   "severity": "Moderate",
-   "headline": "Dense Fog Advisory issued November 13 at 5:24AM CST until November 13 at 12:00PM CST by NWS Bismarck ND",
-   "ends": "2026-11-13T12:00:00-06:00",
-   "area": "Slope; Bowman"
-  },
-  {
-   "event": "Special Weather Statement",
-   "severity": "Moderate",
-   "headline": "Special Weather Statement issued November 13 at 4:55AM CST by NWS Bismarck ND",
-   "ends": "2026-11-13T07:00:00-06:00",
-   "area": "Divide; Burke; Williams; Mountrail; McKenzie; Dunn; Golden Valley; Billings; Stark; Slope; Hettinger; Bowman; Adams"
-  }
- ],
+ "weather": [],
  "rain": [
   {
    "place": "Medora",
