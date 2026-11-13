@@ -1,29 +1,29 @@
 {
- "built": "2026-11-13T06:44:29Z",
+ "built": "2026-11-13T12:42:38Z",
  "fire": {
   "danger": [
    {
     "county": "Billings",
     "today": 1,
     "days": [
-     2,
      1,
      2,
      2,
      2,
-     2
+     1,
+     1
     ]
    },
    {
     "county": "Golden Valley",
     "today": 1,
     "days": [
-     2,
      1,
      2,
      2,
      2,
-     2
+     1,
+     1
     ]
    },
    {
@@ -31,10 +31,10 @@
     "today": 1,
     "days": [
      1,
-     1,
-     1,
      2,
      2,
+     2,
+     1,
      1
     ]
    },
@@ -43,11 +43,11 @@
     "today": 1,
     "days": [
      2,
-     2,
      3,
      3,
      3,
-     3
+     1,
+     1
     ]
    },
    {
@@ -55,10 +55,10 @@
     "today": 1,
     "days": [
      1,
-     1,
-     1,
      2,
      2,
+     2,
+     1,
      1
     ]
    },
@@ -67,10 +67,10 @@
     "today": 1,
     "days": [
      1,
-     1,
-     1,
      2,
      2,
+     1,
+     1,
      1
     ]
    },
@@ -79,11 +79,11 @@
     "today": 1,
     "days": [
      2,
+     2,
+     2,
+     2,
      1,
-     2,
-     2,
-     2,
-     2
+     1
     ]
    }
   ],
@@ -243,7 +243,7 @@
     "note": ""
    }
   ],
-  "published": "2026-11-12T04:15:00Z"
+  "published": "2026-11-13T04:15:00Z"
  },
  "orders": [
   {
@@ -297,27 +297,31 @@
  ],
  "weather": [
   {
+   "event": "Dense Fog Advisory",
+   "severity": "Moderate",
+   "headline": "Dense Fog Advisory issued November 13 at 5:24AM CST until November 13 at 12:00PM CST by NWS Bismarck ND",
+   "ends": "2026-11-13T12:00:00-06:00",
+   "area": "Slope; Bowman"
+  },
+  {
    "event": "Special Weather Statement",
    "severity": "Moderate",
-   "headline": "Special Weather Statement issued November 12 at 10:55PM CST by NWS Bismarck ND",
-   "ends": "2026-11-13T01:00:00-06:00",
-   "area": "Slope; Hettinger; Bowman; Adams"
+   "headline": "Special Weather Statement issued November 13 at 4:55AM CST by NWS Bismarck ND",
+   "ends": "2026-11-13T07:00:00-06:00",
+   "area": "Divide; Burke; Williams; Mountrail; McKenzie; Dunn; Golden Valley; Billings; Stark; Slope; Hettinger; Bowman; Adams"
   }
- ],
- "stale": [
-  "rain"
  ],
  "rain": [
   {
    "place": "Medora",
    "dates": [
-    "2026-11-09",
     "2026-11-10",
     "2026-11-11",
     "2026-11-12",
     "2026-11-13",
     "2026-11-14",
-    "2026-11-15"
+    "2026-11-15",
+    "2026-11-16"
    ],
    "precip": [
     0.0,
@@ -338,8 +342,8 @@
     0.0
    ],
    "chance": [
-    0,
     9,
+    0,
     0,
     0,
     0,
@@ -352,13 +356,13 @@
   {
    "place": "North Unit / Watford City",
    "dates": [
-    "2026-11-09",
     "2026-11-10",
     "2026-11-11",
     "2026-11-12",
     "2026-11-13",
     "2026-11-14",
-    "2026-11-15"
+    "2026-11-15",
+    "2026-11-16"
    ],
    "precip": [
     0.0,
@@ -379,8 +383,8 @@
     0.0
    ],
    "chance": [
-    0,
     6,
+    0,
     0,
     0,
     0,
@@ -393,13 +397,13 @@
   {
    "place": "Southern grassland (Amidon)",
    "dates": [
-    "2026-11-09",
     "2026-11-10",
     "2026-11-11",
     "2026-11-12",
     "2026-11-13",
     "2026-11-14",
-    "2026-11-15"
+    "2026-11-15",
+    "2026-11-16"
    ],
    "precip": [
     0.0,
@@ -420,8 +424,8 @@
     0.0
    ],
    "chance": [
-    0,
     5,
+    0,
     0,
     0,
     0,
