@@ -1,14 +1,14 @@
 {
- "built": "2026-11-15T06:42:42Z",
+ "built": "2026-11-15T12:42:27Z",
  "fire": {
   "danger": [
    {
     "county": "Billings",
-    "today": 1,
+    "today": 2,
     "days": [
      2,
-     2,
-     2,
+     1,
+     1,
      1,
      1,
      1
@@ -16,11 +16,11 @@
    },
    {
     "county": "Golden Valley",
-    "today": 1,
+    "today": 2,
     "days": [
      2,
-     2,
-     2,
+     1,
+     1,
      1,
      1,
      1
@@ -30,8 +30,8 @@
     "county": "McKenzie",
     "today": 1,
     "days": [
-     1,
      2,
+     1,
      1,
      1,
      1,
@@ -40,11 +40,11 @@
    },
    {
     "county": "Slope",
-    "today": 2,
+    "today": 3,
     "days": [
      3,
-     3,
-     3,
+     2,
+     1,
      1,
      1,
      1
@@ -55,7 +55,7 @@
     "today": 1,
     "days": [
      2,
-     2,
+     1,
      1,
      1,
      1,
@@ -67,7 +67,7 @@
     "today": 1,
     "days": [
      2,
-     2,
+     1,
      1,
      1,
      1,
@@ -80,7 +80,7 @@
     "days": [
      2,
      2,
-     2,
+     1,
      1,
      1,
      1
@@ -117,7 +117,7 @@
     "campfires_at": "Very High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 1,
+    "index": 2,
     "expires": null,
     "note": "Includes all cities in Golden Valley County (Beach, Golva and Sentinel Butte)"
    },
@@ -128,7 +128,7 @@
     "campfires_at": "High",
     "campfires_flag": false,
     "camping_at": null,
-    "index": 1,
+    "index": 2,
     "expires": "2027-01-01T06:00:00Z",
     "note": "Includes the cities of Medora, Fryburg, and Fairfield."
    },
@@ -161,7 +161,7 @@
     "campfires_at": "Low",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 2,
+    "index": 3,
     "expires": "2027-01-01T06:00:00Z",
     "note": "Includes all cities in Slope County."
    },
@@ -172,7 +172,7 @@
     "campfires_at": "High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 2,
+    "index": 3,
     "expires": "2027-01-01T06:00:00Z",
     "note": ""
    },
@@ -216,7 +216,7 @@
     "campfires_at": "High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 1,
+    "index": 2,
     "expires": "2027-01-01T06:00:00Z",
     "note": ""
    },
@@ -243,7 +243,7 @@
     "note": ""
    }
   ],
-  "published": "2026-11-14T04:15:00Z"
+  "published": "2026-11-15T04:15:00Z"
  },
  "orders": [
   {
@@ -295,21 +295,26 @@
    "order": "01-18-07-24-01"
   }
  ],
- "weather": [],
- "stale": [
-  "rain"
+ "weather": [
+  {
+   "event": "Special Weather Statement",
+   "severity": "Moderate",
+   "headline": "Special Weather Statement issued November 15 at 4:40AM CST by NWS Bismarck ND",
+   "ends": "2026-11-15T07:00:00-06:00",
+   "area": "Slope; Bowman"
+  }
  ],
  "rain": [
   {
    "place": "Medora",
    "dates": [
-    "2026-11-11",
     "2026-11-12",
     "2026-11-13",
     "2026-11-14",
     "2026-11-15",
     "2026-11-16",
-    "2026-11-17"
+    "2026-11-17",
+    "2026-11-18"
    ],
    "precip": [
     0.0,
@@ -318,7 +323,7 @@
     0.0,
     0.0,
     0.0,
-    0.0
+    0.004
    ],
    "snow": [
     0.0,
@@ -336,21 +341,21 @@
     0,
     0,
     0,
-    0
+    35
    ],
    "past3": 0,
-   "next3": 0
+   "next3": 0.0
   },
   {
    "place": "North Unit / Watford City",
    "dates": [
-    "2026-11-11",
     "2026-11-12",
     "2026-11-13",
     "2026-11-14",
     "2026-11-15",
     "2026-11-16",
-    "2026-11-17"
+    "2026-11-17",
+    "2026-11-18"
    ],
    "precip": [
     0.0,
@@ -359,7 +364,7 @@
     0.0,
     0.0,
     0.0,
-    0.0
+    0.067
    ],
    "snow": [
     0.0,
@@ -377,21 +382,21 @@
     0,
     0,
     0,
-    0
+    51
    ],
    "past3": 0,
-   "next3": 0
+   "next3": 0.07
   },
   {
    "place": "Southern grassland (Amidon)",
    "dates": [
-    "2026-11-11",
     "2026-11-12",
     "2026-11-13",
     "2026-11-14",
     "2026-11-15",
     "2026-11-16",
-    "2026-11-17"
+    "2026-11-17",
+    "2026-11-18"
    ],
    "precip": [
     0.0,
@@ -418,7 +423,7 @@
     0,
     0,
     0,
-    0
+    32
    ],
    "past3": 0,
    "next3": 0
