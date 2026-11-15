@@ -1,5 +1,5 @@
 {
- "built": "2026-11-15T00:51:32Z",
+ "built": "2026-11-15T06:42:42Z",
  "fire": {
   "danger": [
    {
@@ -296,6 +296,9 @@
   }
  ],
  "weather": [],
+ "stale": [
+  "rain"
+ ],
  "rain": [
   {
    "place": "Medora",
