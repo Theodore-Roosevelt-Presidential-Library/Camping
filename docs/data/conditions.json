@@ -1,5 +1,5 @@
 {
- "built": "2026-11-15T12:42:27Z",
+ "built": "2026-11-15T18:42:04Z",
  "fire": {
   "danger": [
    {
@@ -295,15 +295,7 @@
    "order": "01-18-07-24-01"
   }
  ],
- "weather": [
-  {
-   "event": "Special Weather Statement",
-   "severity": "Moderate",
-   "headline": "Special Weather Statement issued November 15 at 4:40AM CST by NWS Bismarck ND",
-   "ends": "2026-11-15T07:00:00-06:00",
-   "area": "Slope; Bowman"
-  }
- ],
+ "weather": [],
  "rain": [
   {
    "place": "Medora",
@@ -323,7 +315,7 @@
     0.0,
     0.0,
     0.0,
-    0.004
+    0.039
    ],
    "snow": [
     0.0,
@@ -332,7 +324,7 @@
     0.0,
     0.0,
     0.0,
-    0.0
+    0.083
    ],
    "chance": [
     0,
@@ -341,10 +333,10 @@
     0,
     0,
     0,
-    35
+    46
    ],
    "past3": 0,
-   "next3": 0.0
+   "next3": 0.04
   },
   {
    "place": "North Unit / Watford City",
@@ -364,7 +356,7 @@
     0.0,
     0.0,
     0.0,
-    0.067
+    0.055
    ],
    "snow": [
     0.0,
@@ -373,7 +365,7 @@
     0.0,
     0.0,
     0.0,
-    0.0
+    0.055
    ],
    "chance": [
     0,
@@ -382,10 +374,10 @@
     0,
     0,
     0,
-    51
+    58
    ],
    "past3": 0,
-   "next3": 0.07
+   "next3": 0.06
   },
   {
    "place": "Southern grassland (Amidon)",
@@ -405,7 +397,7 @@
     0.0,
     0.0,
     0.0,
-    0.0
+    0.035
    ],
    "snow": [
     0.0,
@@ -414,7 +406,7 @@
     0.0,
     0.0,
     0.0,
-    0.0
+    0.083
    ],
    "chance": [
     0,
@@ -423,10 +415,10 @@
     0,
     0,
     0,
-    32
+    42
    ],
    "past3": 0,
-   "next3": 0
+   "next3": 0.04
   }
  ],
  "flags": {
