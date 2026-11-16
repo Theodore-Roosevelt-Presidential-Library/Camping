@@ -1,5 +1,5 @@
 {
- "built": "2026-11-16T12:55:29Z",
+ "built": "2026-11-16T18:42:05Z",
  "fire": {
   "danger": [
    {
@@ -295,14 +295,9 @@
    "order": "01-18-07-24-01"
   }
  ],
- "weather": [
-  {
-   "event": "Special Weather Statement",
-   "severity": "Moderate",
-   "headline": "Special Weather Statement issued November 16 at 6:05AM CST by NWS Bismarck ND",
-   "ends": "2026-11-16T09:00:00-06:00",
-   "area": "Renville; Bottineau; Rolette; Williams; Mountrail; McHenry; Pierce; McKenzie; Dunn; Mercer; Oliver; Sheridan; Wells; Foster; Burleigh; Kidder; Stutsman; Grant; Emmons; Logan; La Moure; McIntosh; Dickey; Northwest Ward; Central and Southern Ward/Minot Area; Western McLean; Eastern McLean; Western Morton; Eastern Morton; Western Sioux; Eastern Sioux"
-  }
+ "weather": [],
+ "stale": [
+  "rain"
  ],
  "rain": [
   {
