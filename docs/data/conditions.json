@@ -1,5 +1,5 @@
 {
- "built": "2026-11-18T06:44:51Z",
+ "built": "2026-11-18T12:42:52Z",
  "fire": {
   "danger": [
    {
@@ -40,7 +40,7 @@
    },
    {
     "county": "Slope",
-    "today": 2,
+    "today": 1,
     "days": [
      1,
      1,
@@ -76,7 +76,7 @@
    },
    {
     "county": "Bowman",
-    "today": 2,
+    "today": 1,
     "days": [
      1,
      1,
@@ -150,7 +150,7 @@
     "campfires_at": "Low",
     "campfires_flag": true,
     "camping_at": "Low",
-    "index": 2,
+    "index": 1,
     "expires": "2027-01-01T06:00:00Z",
     "note": "Cities in Bowman County are not included in the County Burn Restriction"
    },
@@ -161,7 +161,7 @@
     "campfires_at": "Low",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 2,
+    "index": 1,
     "expires": "2027-01-01T06:00:00Z",
     "note": "Includes all cities in Slope County."
    },
@@ -172,7 +172,7 @@
     "campfires_at": "High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 2,
+    "index": 1,
     "expires": "2027-01-01T06:00:00Z",
     "note": ""
    },
@@ -194,7 +194,7 @@
     "campfires_at": "High",
     "campfires_flag": true,
     "camping_at": null,
-    "index": 2,
+    "index": 1,
     "expires": "2027-01-01T06:00:00Z",
     "note": ""
    },
@@ -243,7 +243,7 @@
     "note": ""
    }
   ],
-  "published": "2026-11-17T04:15:00Z"
+  "published": "2026-11-18T04:15:00Z"
  },
  "orders": [
   {
@@ -297,150 +297,164 @@
  ],
  "weather": [
   {
-   "event": "Special Weather Statement",
+   "event": "Dense Fog Advisory",
    "severity": "Moderate",
-   "headline": "Special Weather Statement issued November 17 at 10:52PM CST by NWS Bismarck ND",
-   "ends": "2026-11-18T01:00:00-06:00",
-   "area": "Divide; Burke; Williams; Mountrail; McKenzie; Dunn; Golden Valley; Billings; Stark; Slope; Hettinger; Bowman; Adams"
+   "headline": "Dense Fog Advisory issued November 18 at 6:11AM CST until November 18 at 11:00AM CST by NWS Bismarck ND",
+   "ends": "2026-11-18T11:00:00-06:00",
+   "area": "Divide; Burke; Renville; Williams; Mountrail; McKenzie; Dunn; Mercer; Oliver; Northwest Ward; Central and Southern Ward/Minot Area; Western McLean"
   },
   {
-   "event": "High Wind Warning",
-   "severity": "Severe",
-   "headline": "High Wind Warning issued November 17 at 8:31PM CST until November 19 at 12:00AM CST by NWS Bismarck ND",
-   "ends": "2026-11-19T00:00:00-06:00",
+   "event": "Dense Fog Advisory",
+   "severity": "Moderate",
+   "headline": "Dense Fog Advisory issued November 18 at 6:11AM CST until November 18 at 11:00AM CST by NWS Bismarck ND",
+   "ends": "2026-11-18T11:00:00-06:00",
+   "area": "Golden Valley; Billings; Stark; Slope; Hettinger; Grant; Adams; Western Morton; Eastern Morton; Western Sioux; Eastern Sioux"
+  },
+  {
+   "event": "Dense Fog Advisory",
+   "severity": "Moderate",
+   "headline": "Dense Fog Advisory issued November 18 at 6:11AM CST until November 18 at 11:00AM CST by NWS Bismarck ND",
+   "ends": "2026-11-18T11:00:00-06:00",
    "area": "Bowman"
   },
   {
    "event": "Wind Advisory",
    "severity": "Moderate",
-   "headline": "Wind Advisory issued November 17 at 8:31PM CST until November 19 at 12:00AM CST by NWS Bismarck ND",
+   "headline": "Wind Advisory issued November 18 at 6:11AM CST until November 19 at 12:00AM CST by NWS Bismarck ND",
    "ends": "2026-11-19T00:00:00-06:00",
-   "area": "Golden Valley; Billings; Stark; Slope; Hettinger; Grant; Adams; Emmons; McIntosh; Western Morton; Eastern Morton; Western Sioux; Eastern Sioux"
+   "area": "Golden Valley; Billings; Stark; Slope; Hettinger; Grant; Adams; Western Morton; Eastern Morton; Western Sioux; Eastern Sioux"
+  },
+  {
+   "event": "High Wind Warning",
+   "severity": "Severe",
+   "headline": "High Wind Warning issued November 18 at 6:11AM CST until November 19 at 12:00AM CST by NWS Bismarck ND",
+   "ends": "2026-11-19T00:00:00-06:00",
+   "area": "Bowman"
   }
  ],
  "rain": [
   {
    "place": "Medora",
    "dates": [
-    "2026-11-14",
     "2026-11-15",
     "2026-11-16",
     "2026-11-17",
     "2026-11-18",
     "2026-11-19",
-    "2026-11-20"
+    "2026-11-20",
+    "2026-11-21"
    ],
    "precip": [
-    0.0,
-    0.0,
-    0.0,
-    0.0,
-    0.031,
-    0.0,
-    0.157
-   ],
-   "snow": [
-    0.0,
-    0.0,
-    0.0,
-    0.0,
-    0.028,
-    0.0,
-    0.413
-   ],
-   "chance": [
-    0,
-    0,
-    0,
-    1,
-    33,
-    1,
-    33
-   ],
-   "past3": 0,
-   "next3": 0.19
-  },
-  {
-   "place": "North Unit / Watford City",
-   "dates": [
-    "2026-11-14",
-    "2026-11-15",
-    "2026-11-16",
-    "2026-11-17",
-    "2026-11-18",
-    "2026-11-19",
-    "2026-11-20"
-   ],
-   "precip": [
-    0.0,
-    0.0,
-    0.0,
-    0.0,
-    0.11,
-    0.0,
-    0.094
-   ],
-   "snow": [
-    0.0,
-    0.0,
-    0.0,
-    0.0,
-    0.0,
-    0.0,
-    0.193
-   ],
-   "chance": [
-    0,
-    0,
-    0,
-    0,
-    43,
-    3,
-    52
-   ],
-   "past3": 0,
-   "next3": 0.2
-  },
-  {
-   "place": "Southern grassland (Amidon)",
-   "dates": [
-    "2026-11-14",
-    "2026-11-15",
-    "2026-11-16",
-    "2026-11-17",
-    "2026-11-18",
-    "2026-11-19",
-    "2026-11-20"
-   ],
-   "precip": [
-    0.0,
     0.0,
     0.0,
     0.0,
     0.016,
     0.0,
-    0.169
+    0.087,
+    0.028
    ],
    "snow": [
     0.0,
     0.0,
     0.0,
     0.0,
-    0.028,
     0.0,
-    0.551
+    0.22,
+    0.193
+   ],
+   "chance": [
+    0,
+    0,
+    1,
+    23,
+    0,
+    35,
+    14
+   ],
+   "past3": 0,
+   "next3": 0.11
+  },
+  {
+   "place": "North Unit / Watford City",
+   "dates": [
+    "2026-11-15",
+    "2026-11-16",
+    "2026-11-17",
+    "2026-11-18",
+    "2026-11-19",
+    "2026-11-20",
+    "2026-11-21"
+   ],
+   "precip": [
+    0.0,
+    0.0,
+    0.0,
+    0.043,
+    0.0,
+    0.059,
+    0.224
+   ],
+   "snow": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.22,
+    1.378
    ],
    "chance": [
     0,
     0,
     0,
-    0,
-    25,
+    34,
     1,
-    28
+    38,
+    17
    ],
    "past3": 0,
-   "next3": 0.18
+   "next3": 0.28
+  },
+  {
+   "place": "Southern grassland (Amidon)",
+   "dates": [
+    "2026-11-15",
+    "2026-11-16",
+    "2026-11-17",
+    "2026-11-18",
+    "2026-11-19",
+    "2026-11-20",
+    "2026-11-21"
+   ],
+   "precip": [
+    0.0,
+    0.0,
+    0.0,
+    0.028,
+    0.0,
+    0.098,
+    0.008
+   ],
+   "snow": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.248,
+    0.028
+   ],
+   "chance": [
+    0,
+    0,
+    0,
+    21,
+    0,
+    36,
+    7
+   ],
+   "past3": 0,
+   "next3": 0.11
   }
  ],
  "flags": {
