@@ -1,5 +1,5 @@
 {
- "built": "2026-11-18T12:42:52Z",
+ "built": "2026-11-18T18:42:06Z",
  "fire": {
   "danger": [
    {
@@ -297,39 +297,25 @@
  ],
  "weather": [
   {
-   "event": "Dense Fog Advisory",
-   "severity": "Moderate",
-   "headline": "Dense Fog Advisory issued November 18 at 6:11AM CST until November 18 at 11:00AM CST by NWS Bismarck ND",
-   "ends": "2026-11-18T11:00:00-06:00",
-   "area": "Divide; Burke; Renville; Williams; Mountrail; McKenzie; Dunn; Mercer; Oliver; Northwest Ward; Central and Southern Ward/Minot Area; Western McLean"
-  },
-  {
-   "event": "Dense Fog Advisory",
-   "severity": "Moderate",
-   "headline": "Dense Fog Advisory issued November 18 at 6:11AM CST until November 18 at 11:00AM CST by NWS Bismarck ND",
-   "ends": "2026-11-18T11:00:00-06:00",
-   "area": "Golden Valley; Billings; Stark; Slope; Hettinger; Grant; Adams; Western Morton; Eastern Morton; Western Sioux; Eastern Sioux"
-  },
-  {
-   "event": "Dense Fog Advisory",
-   "severity": "Moderate",
-   "headline": "Dense Fog Advisory issued November 18 at 6:11AM CST until November 18 at 11:00AM CST by NWS Bismarck ND",
-   "ends": "2026-11-18T11:00:00-06:00",
-   "area": "Bowman"
-  },
-  {
    "event": "Wind Advisory",
    "severity": "Moderate",
-   "headline": "Wind Advisory issued November 18 at 6:11AM CST until November 19 at 12:00AM CST by NWS Bismarck ND",
+   "headline": "Wind Advisory issued November 18 at 12:20PM CST until November 19 at 12:00AM CST by NWS Bismarck ND",
    "ends": "2026-11-19T00:00:00-06:00",
-   "area": "Golden Valley; Billings; Stark; Slope; Hettinger; Grant; Adams; Western Morton; Eastern Morton; Western Sioux; Eastern Sioux"
+   "area": "Golden Valley; Billings; Stark; Slope; Hettinger; Grant; Adams; Emmons; McIntosh; Western Morton; Eastern Morton; Western Sioux; Eastern Sioux"
   },
   {
    "event": "High Wind Warning",
    "severity": "Severe",
-   "headline": "High Wind Warning issued November 18 at 6:11AM CST until November 19 at 12:00AM CST by NWS Bismarck ND",
+   "headline": "High Wind Warning issued November 18 at 12:20PM CST until November 19 at 12:00AM CST by NWS Bismarck ND",
    "ends": "2026-11-19T00:00:00-06:00",
    "area": "Bowman"
+  },
+  {
+   "event": "Special Weather Statement",
+   "severity": "Moderate",
+   "headline": "Special Weather Statement issued November 18 at 12:02PM CST by NWS Bismarck ND",
+   "ends": "2026-11-18T14:00:00-06:00",
+   "area": "Divide; Burke; Renville; Williams; Mountrail; McKenzie; Northwest Ward; Central and Southern Ward/Minot Area; Western McLean; Eastern McLean"
   }
  ],
  "rain": [
@@ -348,10 +334,10 @@
     0.0,
     0.0,
     0.0,
-    0.016,
     0.0,
-    0.087,
-    0.028
+    0.0,
+    0.02,
+    0.0
    ],
    "snow": [
     0.0,
@@ -359,20 +345,20 @@
     0.0,
     0.0,
     0.0,
-    0.22,
-    0.193
+    0.055,
+    0.0
    ],
    "chance": [
     0,
     0,
     1,
-    23,
+    17,
     0,
-    35,
+    28,
     14
    ],
    "past3": 0,
-   "next3": 0.11
+   "next3": 0.02
   },
   {
    "place": "North Unit / Watford City",
@@ -389,10 +375,10 @@
     0.0,
     0.0,
     0.0,
-    0.043,
+    0.031,
     0.0,
-    0.059,
-    0.224
+    0.043,
+    0.047
    ],
    "snow": [
     0.0,
@@ -400,20 +386,20 @@
     0.0,
     0.0,
     0.0,
-    0.22,
-    1.378
+    0.055,
+    0.276
    ],
    "chance": [
     0,
     0,
     0,
-    34,
-    1,
+    44,
+    2,
     38,
-    17
+    23
    ],
    "past3": 0,
-   "next3": 0.28
+   "next3": 0.09
   },
   {
    "place": "Southern grassland (Amidon)",
@@ -430,10 +416,10 @@
     0.0,
     0.0,
     0.0,
-    0.028,
     0.0,
-    0.098,
-    0.008
+    0.0,
+    0.028,
+    0.0
    ],
    "snow": [
     0.0,
@@ -441,20 +427,20 @@
     0.0,
     0.0,
     0.0,
-    0.248,
-    0.028
+    0.055,
+    0.0
    ],
    "chance": [
     0,
     0,
     0,
-    21,
-    0,
-    36,
-    7
+    11,
+    1,
+    31,
+    10
    ],
    "past3": 0,
-   "next3": 0.11
+   "next3": 0.03
   }
  ],
  "flags": {
