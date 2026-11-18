@@ -1,5 +1,5 @@
 {
- "built": "2026-11-17T18:42:33Z",
+ "built": "2026-11-18T00:51:13Z",
  "fire": {
   "danger": [
    {
@@ -295,7 +295,22 @@
    "order": "01-18-07-24-01"
   }
  ],
- "weather": [],
+ "weather": [
+  {
+   "event": "High Wind Warning",
+   "severity": "Severe",
+   "headline": "High Wind Warning issued November 17 at 1:34PM CST until November 19 at 12:00AM CST by NWS Bismarck ND",
+   "ends": "2026-11-19T00:00:00-06:00",
+   "area": "Bowman"
+  },
+  {
+   "event": "Wind Advisory",
+   "severity": "Moderate",
+   "headline": "Wind Advisory issued November 17 at 1:34PM CST until November 19 at 12:00AM CST by NWS Bismarck ND",
+   "ends": "2026-11-19T00:00:00-06:00",
+   "area": "Golden Valley; Billings; Stark; Slope; Hettinger; Grant; Adams; Emmons; McIntosh; Western Morton; Eastern Morton; Western Sioux; Eastern Sioux"
+  }
+ ],
  "rain": [
   {
    "place": "Medora",
@@ -313,30 +328,30 @@
     0.0,
     0.0,
     0.0,
-    0.016,
+    0.094,
     0.0,
-    0.039
+    0.004
    ],
    "snow": [
     0.0,
     0.0,
     0.0,
     0.0,
+    0.028,
     0.0,
-    0.0,
-    0.055
+    0.0
    ],
    "chance": [
     0,
     0,
     0,
     1,
-    53,
-    5,
-    26
+    27,
+    4,
+    31
    ],
    "past3": 0,
-   "next3": 0.06
+   "next3": 0.1
   },
   {
    "place": "North Unit / Watford City",
@@ -354,7 +369,7 @@
     0.0,
     0.0,
     0.0,
-    0.146,
+    0.134,
     0.0,
     0.004
    ],
@@ -372,12 +387,12 @@
     0,
     0,
     0,
-    72,
-    9,
-    32
+    57,
+    6,
+    35
    ],
    "past3": 0,
-   "next3": 0.15
+   "next3": 0.14
   },
   {
    "place": "Southern grassland (Amidon)",
@@ -395,9 +410,9 @@
     0.0,
     0.0,
     0.0,
-    0.028,
     0.0,
-    0.083
+    0.0,
+    0.008
    ],
    "snow": [
     0.0,
@@ -406,19 +421,19 @@
     0.0,
     0.0,
     0.0,
-    0.248
+    0.0
    ],
    "chance": [
     0,
     0,
     0,
     0,
-    48,
+    39,
     2,
-    25
+    31
    ],
    "past3": 0,
-   "next3": 0.11
+   "next3": 0.01
   }
  ],
  "flags": {
