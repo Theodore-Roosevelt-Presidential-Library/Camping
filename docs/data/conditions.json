@@ -1,5 +1,5 @@
 {
- "built": "2026-11-19T00:50:27Z",
+ "built": "2026-11-19T06:45:18Z",
  "fire": {
   "danger": [
    {
@@ -295,25 +295,7 @@
    "order": "01-18-07-24-01"
   }
  ],
- "weather": [
-  {
-   "event": "Wind Advisory",
-   "severity": "Moderate",
-   "headline": "Wind Advisory issued November 18 at 12:20PM CST until November 19 at 12:00AM CST by NWS Bismarck ND",
-   "ends": "2026-11-19T00:00:00-06:00",
-   "area": "Golden Valley; Billings; Stark; Slope; Hettinger; Grant; Adams; Emmons; McIntosh; Western Morton; Eastern Morton; Western Sioux; Eastern Sioux"
-  },
-  {
-   "event": "High Wind Warning",
-   "severity": "Severe",
-   "headline": "High Wind Warning issued November 18 at 12:20PM CST until November 19 at 12:00AM CST by NWS Bismarck ND",
-   "ends": "2026-11-19T00:00:00-06:00",
-   "area": "Bowman"
-  }
- ],
- "stale": [
-  "rain"
- ],
+ "weather": [],
  "rain": [
   {
    "place": "Medora",
@@ -332,7 +314,7 @@
     0.0,
     0.0,
     0.0,
-    0.02,
+    0.007,
     0.0
    ],
    "snow": [
@@ -341,20 +323,20 @@
     0.0,
     0.0,
     0.0,
-    0.055,
+    0.0,
     0.0
    ],
    "chance": [
     0,
     0,
     1,
-    17,
-    0,
-    28,
-    14
+    19,
+    2,
+    37,
+    8
    ],
    "past3": 0,
-   "next3": 0.02
+   "next3": 0.01
   },
   {
    "place": "North Unit / Watford City",
@@ -371,31 +353,31 @@
     0.0,
     0.0,
     0.0,
-    0.031,
+    0.059,
     0.0,
-    0.043,
-    0.047
+    0.004,
+    0.0
    ],
    "snow": [
     0.0,
     0.0,
     0.0,
-    0.0,
-    0.0,
     0.055,
-    0.276
+    0.0,
+    0.0,
+    0.0
    ],
    "chance": [
     0,
     0,
     0,
-    44,
-    2,
-    38,
-    23
+    33,
+    4,
+    42,
+    12
    ],
    "past3": 0,
-   "next3": 0.09
+   "next3": 0.0
   },
   {
    "place": "Southern grassland (Amidon)",
@@ -414,7 +396,7 @@
     0.0,
     0.0,
     0.0,
-    0.028,
+    0.0,
     0.0
    ],
    "snow": [
@@ -423,20 +405,20 @@
     0.0,
     0.0,
     0.0,
-    0.055,
+    0.0,
     0.0
    ],
    "chance": [
     0,
     0,
     0,
-    11,
+    9,
     1,
-    31,
-    10
+    34,
+    8
    ],
    "past3": 0,
-   "next3": 0.03
+   "next3": 0
   }
  ],
  "flags": {
