@@ -1,5 +1,5 @@
 {
- "built": "2026-11-25T12:43:33Z",
+ "built": "2026-11-25T18:42:08Z",
  "fire": {
   "danger": [
    {
@@ -295,15 +295,7 @@
    "order": "01-18-07-24-01"
   }
  ],
- "weather": [
-  {
-   "event": "Dense Fog Advisory",
-   "severity": "Moderate",
-   "headline": "Dense Fog Advisory issued November 25 at 5:19AM CST until November 25 at 12:00PM CST by NWS Bismarck ND",
-   "ends": "2026-11-25T12:00:00-06:00",
-   "area": "Dunn; Mercer; Oliver; Stark; Slope; Hettinger; Grant; Bowman; Adams; Western Morton; Eastern Morton; Western Sioux; Eastern Sioux"
-  }
- ],
+ "weather": [],
  "rain": [
   {
    "place": "Medora",
@@ -338,10 +330,10 @@
     0,
     0,
     0,
-    1,
     0,
+    7,
     2,
-    9
+    4
    ],
    "past3": 0,
    "next3": 0
@@ -364,7 +356,7 @@
     0.0,
     0.0,
     0.0,
-    0.008
+    0.0
    ],
    "snow": [
     0.0,
@@ -373,19 +365,19 @@
     0.0,
     0.0,
     0.0,
-    0.055
+    0.0
    ],
    "chance": [
     0,
     0,
     0,
     1,
-    8,
-    1,
-    4
+    9,
+    14,
+    6
    ],
    "past3": 0,
-   "next3": 0.01
+   "next3": 0
   },
   {
    "place": "Southern grassland (Amidon)",
@@ -405,7 +397,7 @@
     0.0,
     0.0,
     0.0,
-    0.004
+    0.0
    ],
    "snow": [
     0.0,
@@ -420,13 +412,13 @@
     0,
     0,
     1,
+    0,
     1,
-    1,
-    1,
+    4,
     6
    ],
    "past3": 0,
-   "next3": 0.0
+   "next3": 0
   }
  ],
  "flags": {
